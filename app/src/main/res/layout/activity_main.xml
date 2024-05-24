@@ -9,10 +9,11 @@
     tools:context=".MainActivity">
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/btnStart"
         android:layout_width="157dp"
         android:layout_height="137dp"
         android:background="@null"
+        android:onClick="startPage"
         android:contentDescription="@string/desc_button_start"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,7 +39,7 @@
         app:srcCompat="@drawable/button_help" />
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/btnClose"
         android:layout_width="87dp"
         android:layout_height="89dp"
         android:background="@null"

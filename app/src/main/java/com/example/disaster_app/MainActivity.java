@@ -30,4 +30,8 @@ public class MainActivity extends AppCompatActivity {
     public void closeApp(View view) {
         finish();
     }
+
+    public void startPage(View view) {
+        startActivity(new Intent(MainActivity.this, StartPage.class));
+    }
 }
