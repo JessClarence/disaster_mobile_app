@@ -38,6 +38,8 @@ public class Manual extends AppCompatActivity {
         setContentView(R.layout.activity_manual);
 
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+
+
     }
 
     public void pageNext(View view) {
