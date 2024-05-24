@@ -24,4 +24,8 @@ public class StartPage extends AppCompatActivity {
     public void backPage(View view) {
         startActivity(new Intent(StartPage.this, MainActivity.class));
     }
+
+    public void quizPage(View view) {
+        startActivity(new Intent(StartPage.this, Quiz.class));
+    }
 }

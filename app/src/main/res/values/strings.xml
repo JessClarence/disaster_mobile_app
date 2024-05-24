@@ -11,4 +11,5 @@
     <string name="desc_button_quake">Quake Button</string>
     <string name="desc_button_miniGame">MiniGame Button</string>
     <string name="desc_button_quiz">Quiz Button</string>
+    <string name="desc_button_question">Questions Button</string>
 </resources>
