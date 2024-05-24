@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">disaster_app</string>
+    <string name="desc_button_start">Start Button</string>
+    <string name="desc_button_help">Help Button</string>
+    <string name="desc_button_shutdown">Shutdown Button</string>
+    <string name="desc_manual_button_close">Close Manual Button</string>
+    <string name="desc_manual_button_back">Back Manual Button</string>
+    <string name="desc_manual_button_next">Next Manual Button</string>
+</resources>
