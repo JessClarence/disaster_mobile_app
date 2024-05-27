@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/q1"
+    tools:context=".Quiz">
+
+    <ImageButton
+        android:id="@+id/btnNext"
+        android:layout_width="115dp"
+        android:layout_height="54dp"
+        android:background="@null"
+        android:contentDescription="@string/desc_manual_button_next"
+        android:onClick="pageNext"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.873"
+        app:srcCompat="@drawable/button_next" />
+
+    <ImageButton
+        android:id="@+id/qa"
+        android:layout_width="334dp"
+        android:layout_height="78dp"
+        android:background="@null"
+        android:contentDescription="@string/desc_button_question"
+        android:scaleType="fitCenter"
+        android:onClick="q1aButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.348"
+        app:srcCompat="@drawable/q1a" />
+
+    <ImageButton
+        android:id="@+id/qb"
+        android:layout_width="334dp"
+        android:layout_height="78dp"
+        android:background="@null"
+        android:contentDescription="@string/desc_button_question"
+        android:scaleType="fitCenter"
+        android:onClick="q1bButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.534"
+        app:srcCompat="@drawable/q1b" />
+
+    <ImageButton
+        android:id="@+id/qc"
+        android:layout_width="334dp"
+        android:layout_height="78dp"
+        android:background="@null"
+        android:contentDescription="@string/desc_button_question"
+        android:scaleType="fitCenter"
+        android:onClick="q1cButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.723"
+        app:srcCompat="@drawable/q1c" />
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="59dp"
+        android:layout_height="60dp"
+        android:background="@null"
+        android:contentDescription="@string/desc_manual_button_back"
+        android:onClick="backPage"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.858"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.082"
+        app:srcCompat="@drawable/exitbutton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

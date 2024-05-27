@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dashb"
+    tools:context=".StartPage">
+
+
+    <ImageButton
+        android:id="@+id/btnFire"
+        android:layout_width="187dp"
+        android:layout_height="217dp"
+        android:background="@null"
+        android:onClick="firePage"
+        android:contentDescription="@string/desc_button_fire"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.644"
+        app:srcCompat="@drawable/button_fire"
+        android:scaleType="fitCenter"/>
+
+    <ImageButton
+        android:id="@+id/btnFlood"
+        android:layout_width="189dp"
+        android:layout_height="215dp"
+        android:background="@null"
+        android:contentDescription="@string/desc_button_flood"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.637"
+        app:srcCompat="@drawable/button_flood"
+        android:scaleType="fitCenter"/>
+
+    <ImageButton
+        android:id="@+id/btnQuake"
+        android:layout_width="190dp"
+        android:layout_height="213dp"
+        android:background="@null"
+        android:contentDescription="@string/desc_button_quake"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.935"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.631"
+        app:srcCompat="@drawable/button_quake"
+        android:scaleType="fitCenter"/>
+
+    <ImageButton
+        android:id="@+id/btnMiniGame"
+        android:layout_width="87dp"
+        android:layout_height="75dp"
+        android:background="@null"
+        android:contentDescription="@string/desc_button_miniGame"
+        android:onClick="minigamePage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.024"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.047"
+        app:srcCompat="@drawable/minigame_icon"
+        android:scaleType="fitCenter"/>
+
+    <ImageButton
+        android:id="@+id/btnQuiz"
+        android:layout_width="86dp"
+        android:layout_height="76dp"
+        android:background="@null"
+        android:contentDescription="@string/desc_button_quiz"
+        android:onClick="quizPage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.975"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.047"
+        app:srcCompat="@drawable/button_quiz"
+        android:scaleType="fitCenter"/>
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="110dp"
+        android:layout_height="51dp"
+        android:background="@null"
+        android:contentDescription="@string/desc_manual_button_back"
+        android:onClick="backPage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.024"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.984"
+        app:srcCompat="@drawable/button_back"
+        android:scaleType="fitCenter"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

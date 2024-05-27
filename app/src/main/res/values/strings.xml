@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">disaster_app</string>
+    <string name="desc_button_start">Start Button</string>
+    <string name="desc_button_help">Help Button</string>
+    <string name="desc_button_shutdown">Shutdown Button</string>
+    <string name="desc_manual_button_close">Close Manual Button</string>
+    <string name="desc_manual_button_back">Back Manual Button</string>
+    <string name="desc_manual_button_next">Next Manual Button</string>
+    <string name="desc_button_fire">Fire Button</string>
+    <string name="desc_button_flood">Flood Button</string>
+    <string name="desc_button_quake">Quake Button</string>
+    <string name="desc_button_miniGame">MiniGame Button</string>
+    <string name="desc_button_quiz">Quiz Button</string>
+    <string name="desc_button_question">Questions Button</string>
+</resources>
