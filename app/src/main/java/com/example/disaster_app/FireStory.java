@@ -11,25 +11,21 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class StartPage extends AppCompatActivity {
+public class FireStory extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_start_page);
+        setContentView(R.layout.activity_fire_story);
 
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
     }
 
-    public void backPage(View view) {
-        startActivity(new Intent(StartPage.this, MainActivity.class));
+    public void closePage(View view) {
+        startActivity(new Intent(FireStory.this, StartPage.class));
     }
 
-    public void quizPage(View view) {
-        startActivity(new Intent(StartPage.this, Quiz.class));
-    }
+    public void nextPage(View view) {
 
-    public void firePage(View view) {
-        startActivity(new Intent(StartPage.this, FireStory.class));
     }
 }

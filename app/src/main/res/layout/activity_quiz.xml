@@ -24,7 +24,7 @@
         app:srcCompat="@drawable/button_next" />
 
     <ImageButton
-        android:id="@+id/q1a"
+        android:id="@+id/qa"
         android:layout_width="334dp"
         android:layout_height="78dp"
         android:background="@null"
@@ -40,7 +40,7 @@
         app:srcCompat="@drawable/q1a" />
 
     <ImageButton
-        android:id="@+id/q1b"
+        android:id="@+id/qb"
         android:layout_width="334dp"
         android:layout_height="78dp"
         android:background="@null"
@@ -56,7 +56,7 @@
         app:srcCompat="@drawable/q1b" />
 
     <ImageButton
-        android:id="@+id/q1c"
+        android:id="@+id/qc"
         android:layout_width="334dp"
         android:layout_height="78dp"
         android:background="@null"
