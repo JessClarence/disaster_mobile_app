@@ -14,6 +14,7 @@
         android:layout_width="187dp"
         android:layout_height="217dp"
         android:background="@null"
+        android:onClick="firePage"
         android:contentDescription="@string/desc_button_fire"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

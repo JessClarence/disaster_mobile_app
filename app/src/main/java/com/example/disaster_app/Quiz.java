@@ -84,7 +84,7 @@ public class Quiz extends AppCompatActivity {
             R.drawable.q14c,
             R.drawable.q15c};
     private int i = 0;
-    private List<Integer> indices = new ArrayList<>();
+    private int currentIndex;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,11 +93,13 @@ public class Quiz extends AppCompatActivity {
 
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
+        List<Integer> indices = new ArrayList<>();
         int length = drawableQuestions.length;
         for (int i = 0; i < length; i++) {
             indices.add(i);
         }
         Collections.shuffle(indices);
+        currentIndex = indices.get(i);
 
         reorderArray(drawableQuestions, indices);
         reorderArray(drawableqa, indices);
@@ -114,9 +116,9 @@ public class Quiz extends AppCompatActivity {
 
     public void pageNext(View view) {
         ConstraintLayout layout = findViewById(R.id.main);
-        ImageButton qa = findViewById(R.id.q1a);
-        ImageButton qb = findViewById(R.id.q1b);
-        ImageButton qc = findViewById(R.id.q1c);
+        ImageButton qa = findViewById(R.id.qa);
+        ImageButton qb = findViewById(R.id.qb);
+        ImageButton qc = findViewById(R.id.qc);
 
 
         if (i < 9) { // should be 10
@@ -131,18 +133,161 @@ public class Quiz extends AppCompatActivity {
     }
 
     public void q1aButton(View view) {
-        ImageButton imageButton = findViewById(R.id.q1a);
-        imageButton.setImageResource(R.drawable.q1aw);
+        ImageButton imageButton = findViewById(R.id.qa);
+        switch (currentIndex) {
+            case 0:
+                imageButton.setImageResource(R.drawable.q1aw);
+                break;
+            case 1:
+                imageButton.setImageResource(R.drawable.q2ac);
+                break;
+            case 2:
+                imageButton.setImageResource(R.drawable.q3aw);
+                break;
+            case 3:
+                imageButton.setImageResource(R.drawable.q4aw);
+                break;
+            case 4:
+                imageButton.setImageResource(R.drawable.q5aw);
+                break;
+            case 5:
+                imageButton.setImageResource(R.drawable.q6aw);
+                break;
+            case 6:
+                imageButton.setImageResource(R.drawable.q7aw);
+                break;
+            case 7:
+                imageButton.setImageResource(R.drawable.q8aw);
+                break;
+            case 8:
+                imageButton.setImageResource(R.drawable.q9aw);
+                break;
+            case 9:
+                imageButton.setImageResource(R.drawable.q10ac);
+                break;
+            case 10:
+                imageButton.setImageResource(R.drawable.q11aw);
+                break;
+            case 11:
+                imageButton.setImageResource(R.drawable.q12ac);
+                break;
+            case 12:
+                imageButton.setImageResource(R.drawable.q13aw);
+                break;
+            case 13:
+                imageButton.setImageResource(R.drawable.q14aw);
+                break;
+            case 14:
+                imageButton.setImageResource(R.drawable.q15aw);
+                break;
+
+        }
     }
 
     public void q1bButton(View view) {
-        ImageButton imageButton = findViewById(R.id.q1b);
-        imageButton.setImageResource(R.drawable.q1bc);
+        ImageButton imageButton = findViewById(R.id.qb);
+
+        switch (currentIndex) {
+            case 0:
+                imageButton.setImageResource(R.drawable.q1bc);
+                break;
+            case 1:
+                imageButton.setImageResource(R.drawable.q2bw);
+                break;
+            case 2:
+                imageButton.setImageResource(R.drawable.q3bc);
+                break;
+            case 3:
+                imageButton.setImageResource(R.drawable.q4bc);
+                break;
+            case 4:
+                imageButton.setImageResource(R.drawable.q5bc);
+                break;
+            case 5:
+                imageButton.setImageResource(R.drawable.q6bw);
+                break;
+            case 6:
+                imageButton.setImageResource(R.drawable.q7bw);
+                break;
+            case 7:
+                imageButton.setImageResource(R.drawable.q8bc);
+                break;
+            case 8:
+                imageButton.setImageResource(R.drawable.q9bc);
+                break;
+            case 9:
+                imageButton.setImageResource(R.drawable.q10bw);
+                break;
+            case 10:
+                imageButton.setImageResource(R.drawable.q11bw);
+                break;
+            case 11:
+                imageButton.setImageResource(R.drawable.q12bw);
+                break;
+            case 12:
+                imageButton.setImageResource(R.drawable.q13bw);
+                break;
+            case 13:
+                imageButton.setImageResource(R.drawable.q14bc);
+                break;
+            case 14:
+                imageButton.setImageResource(R.drawable.q15bc);
+                break;
+
+        }
     }
 
     public void q1cButton(View view) {
-        ImageButton imageButton = findViewById(R.id.q1c);
-        imageButton.setImageResource(R.drawable.q1cw);
+        ImageButton imageButton = findViewById(R.id.qc);
+
+        switch (currentIndex) {
+            case 0:
+                imageButton.setImageResource(R.drawable.q11cc);
+                break;
+            case 1:
+                imageButton.setImageResource(R.drawable.q2cw);
+                break;
+            case 2:
+                imageButton.setImageResource(R.drawable.q3cw);
+                break;
+            case 3:
+                imageButton.setImageResource(R.drawable.q4c); // no answer
+                break;
+            case 4:
+                imageButton.setImageResource(R.drawable.q5cw);
+                break;
+            case 5:
+                imageButton.setImageResource(R.drawable.q6cc);
+                break;
+            case 6:
+                imageButton.setImageResource(R.drawable.q7cc);
+                break;
+            case 7:
+                imageButton.setImageResource(R.drawable.q8cw);
+                break;
+            case 8:
+                imageButton.setImageResource(R.drawable.q9cw);
+                break;
+            case 9:
+                imageButton.setImageResource(R.drawable.q10cw);
+                break;
+            case 10:
+                imageButton.setImageResource(R.drawable.q11cc);
+                break;
+            case 11:
+                imageButton.setImageResource(R.drawable.q12cw);
+                break;
+            case 12:
+                imageButton.setImageResource(R.drawable.q13cc);
+                break;
+            case 13:
+                imageButton.setImageResource(R.drawable.q14cw);
+                break;
+            case 14:
+                imageButton.setImageResource(R.drawable.q15cw);
+                break;
+
+        }
     }
 
     public void backPage(View view) {
