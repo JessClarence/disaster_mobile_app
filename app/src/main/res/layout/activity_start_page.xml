@@ -60,6 +60,7 @@
         android:layout_height="75dp"
         android:background="@null"
         android:contentDescription="@string/desc_button_miniGame"
+        android:onClick="minigamePage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.024"

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MiniGame"
+    android:background="@drawable/minigame_bg"
+    >
+
+    <ImageView
+        android:id="@+id/minigame_title"
+        android:layout_width="329dp"
+        android:layout_height="74dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.096"
+        app:srcCompat="@drawable/minigame_title" />
+
+    <ImageButton
+        android:id="@+id/minigame_button1"
+        android:layout_width="185dp"
+        android:layout_height="186dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:contentDescription="Fire Game Button"
+        android:onClick="minigameFirePage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.121"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.543"
+        app:srcCompat="@drawable/minigame_button1" />
+
+    <ImageButton
+        android:id="@+id/minigame_button2"
+        android:layout_width="208dp"
+        android:layout_height="187dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:contentDescription="Flood Game Button"
+        android:onClick="minigameFloodPage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.679"
+        app:srcCompat="@drawable/minigame_button2" />
+
+    <ImageButton
+        android:id="@+id/minigame_button3"
+        android:layout_width="199dp"
+        android:layout_height="186dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:contentDescription="Quake Game Button"
+        android:onClick="minigameQuakePage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.903"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.543"
+        app:srcCompat="@drawable/minigame_button3" />
+
+    <ImageButton
+        android:id="@+id/button_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:onClick="backPage"
+        android:contentDescription="Back Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.956"
+        app:srcCompat="@drawable/button_back" />
+</androidx.constraintlayout.widget.ConstraintLayout>

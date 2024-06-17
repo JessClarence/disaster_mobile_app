@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FireGame"
+    android:background="@drawable/minifire_playbackground"
+    >
+
+    <ImageButton
+        android:id="@+id/minigame_playbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:contentDescription="Fire Game Play Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.891"
+        app:srcCompat="@drawable/minigame_playbutton" />
+
+    <ImageView
+        android:id="@+id/minifire_bginstruction"
+        android:layout_width="488dp"
+        android:layout_height="337dp"
+        android:scaleType="fitCenter"
+        android:contentDescription="Instruction Display"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/minifire_bginstruction" />
+
+    <ImageButton
+        android:id="@+id/minigame_okaybutton"
+        android:layout_width="181dp"
+        android:layout_height="57dp"
+        android:background="@null"
+        android:contentDescription="Okay Button"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.78"
+        app:srcCompat="@drawable/minigame_okaybutton" />
+
+    <ImageView
+        android:id="@+id/minifire_sparky0"
+        android:layout_width="198dp"
+        android:layout_height="341dp"
+        android:contentDescription="Sparky Costume 0"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.112"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.471"
+        app:srcCompat="@drawable/minifire_sparky0" />
+
+    <ImageButton
+        android:id="@+id/minifire_button_gloves"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:contentDescription="Glove Button"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.614"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.145"
+        app:srcCompat="@drawable/minifire_button_gloves" />
+
+    <ImageButton
+        android:id="@+id/minifire_button_mask"
+        android:layout_width="154dp"
+        android:layout_height="147dp"
+        android:background="@null"
+        android:contentDescription="Mask Button"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.14"
+        app:srcCompat="@drawable/minifire_button_mask" />
+
+    <ImageButton
+        android:id="@+id/minifire_button_top"
+        android:layout_width="145dp"
+        android:layout_height="128dp"
+        android:background="@null"
+        android:contentDescription="Top Button"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.619"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.395"
+        app:srcCompat="@drawable/minifire_button_top" />
+
+    <ImageButton
+        android:id="@+id/minifire_button_shoes"
+        android:layout_width="215dp"
+        android:layout_height="84dp"
+        android:background="@null"
+        android:contentDescription="Shoes Button"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.883"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498"
+        app:srcCompat="@drawable/minifire_button_shoes" />
+
+    <ImageButton
+        android:id="@+id/minifire_button_cap"
+        android:layout_width="146dp"
+        android:layout_height="145dp"
+        android:background="@null"
+        android:contentDescription="Cap Button"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.618"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.763"
+        app:srcCompat="@drawable/minifire_button_cap" />
+
+    <ImageButton
+        android:id="@+id/minifire_button_bottoms"
+        android:layout_width="137dp"
+        android:layout_height="137dp"
+        android:background="@null"
+        android:contentDescription="Bottom Button"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.841"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.77"
+        app:srcCompat="@drawable/minifire_button_bottoms" />
+
+    <ImageView
+        android:id="@+id/minifire_score0"
+        android:layout_width="94dp"
+        android:layout_height="43dp"
+        android:contentDescription="Score"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.974"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.043"
+        app:srcCompat="@drawable/minifire_score0" />
+
+    <ImageView
+        android:id="@+id/minifire_mess1"
+        android:layout_width="712dp"
+        android:layout_height="51dp"
+        android:contentDescription="Subtitle"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.966"
+        app:srcCompat="@drawable/minifire_mess1" />
+
+    <ImageButton
+        android:id="@+id/exitbutton"
+        android:layout_width="51dp"
+        android:layout_height="64dp"
+        android:background="@null"
+        android:contentDescription="Exit Button"
+        android:scaleType="fitCenter"
+        android:onClick="minigamePage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.013"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/exitbutton" />
+
+    <ImageButton
+        android:id="@+id/mini_buttonhome"
+        android:layout_width="182dp"
+        android:layout_height="65dp"
+        android:background="@null"
+        android:contentDescription="Home Button"
+        android:onClick="minigamePage"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.332"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.817"
+        app:srcCompat="@drawable/mini_buttonhome" />
+
+    <ImageButton
+        android:id="@+id/mini_buttonreplay"
+        android:layout_width="193dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="380dp"
+        android:background="@null"
+        android:contentDescription="Replay Button"
+        android:onClick="replayFireGame"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.818"
+        app:srcCompat="@drawable/mini_buttonreplay" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
