@@ -37,4 +37,7 @@ public class StartPage extends AppCompatActivity {
         startActivity(new Intent(StartPage.this, MiniGame.class));
     }
 
+    public void floodPage(View view) {
+        startActivity(new Intent(StartPage.this, FloodStory.class));
+    }
 }

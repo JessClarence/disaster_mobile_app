@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/f10"
+    tools:context=".FloodStory">
+
+   <!--first page-->
+    <ImageView
+        android:id="@+id/btnPrev"
+        android:layout_width="103dp"
+        android:layout_height="50dp"
+        android:background="@null"
+        android:contentDescription="@string/desc_manual_button_back"
+        android:onClick="pageBack"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.071"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.988"
+        app:srcCompat="@drawable/button_back"
+        android:visibility="visible" />
+    <!--first page-->
+    <ImageView
+        android:id="@+id/btnNext"
+        android:layout_width="103dp"
+        android:layout_height="50dp"
+        android:background="@null"
+        android:contentDescription="@string/desc_manual_button_next"
+        android:onClick="pageNext"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.926"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.988"
+        app:srcCompat="@drawable/button_next"
+        tools:ignore="UsingOnClickInXml"
+        android:visibility="visible" />
+    <!--first page-->
+    <ImageView
+        android:id="@+id/btnExit"
+        android:layout_width="65dp"
+        android:layout_height="62dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.975"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.017"
+        app:srcCompat="@drawable/button_close"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/platform"
+        android:layout_width="753dp"
+        android:layout_height="671dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.39"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/template_blue" />
+
+
+    <ImageView
+        android:id="@+id/flood_card"
+        android:layout_width="748dp"
+        android:layout_height="378dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.45"
+        app:srcCompat="@drawable/template_prompt_flood" />
+
+    <ImageView
+        android:id="@+id/second_choice"
+        android:layout_width="154dp"
+        android:layout_height="137dp"
+        android:visibility="gone"
+        android:onClick="pageSecondChoice"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.672"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.69"
+        app:srcCompat="@drawable/fl_2_2" />
+
+    <ImageView
+        android:id="@+id/first_choice"
+        android:layout_width="154dp"
+        android:layout_height="137dp"
+        android:visibility="gone"
+        android:onClick="pageFirstChoice"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.325"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.69"
+        app:srcCompat="@drawable/fl_2_1" />
+
+    <ImageView
+        android:id="@+id/mess_flood1"
+        android:layout_width="525dp"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/flood_card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.97"
+        app:srcCompat="@drawable/prompt_mess_flood1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
