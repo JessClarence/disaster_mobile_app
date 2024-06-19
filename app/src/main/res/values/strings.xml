@@ -12,4 +12,5 @@
     <string name="desc_button_miniGame">MiniGame Button</string>
     <string name="desc_button_quiz">Quiz Button</string>
     <string name="desc_button_question">Questions Button</string>
+    <string name="desc_button_Ok">OK Button</string>
 </resources>

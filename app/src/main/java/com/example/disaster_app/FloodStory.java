@@ -16,20 +16,15 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 // images
 // @drawable/f10
 // @drawable/bg_plaindarken
+// @drawable/f11
 
 
 public class FloodStory extends AppCompatActivity {
 
     private ConstraintLayout mainLayout;
     private ImageView
-            platform,
-            floodCard,
-            secondChoice,
-            firstChoice,
-            messFlood1,
-            btnPrev,
-            btnNext,
-            btnExit;
+            platform,floodCard,secondChoice,firstChoice,messFlood1,btnPrev,btnNext,curtain,
+            welldone,btnProceed,wrongflood1,btnOk,thirdchoice,fourthchoice,mess_prompt2,btnExit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,17 +42,26 @@ public class FloodStory extends AppCompatActivity {
         btnPrev = findViewById(R.id.btnPrev);
         btnNext = findViewById(R.id.btnNext);
         btnExit = findViewById(R.id.btnExit);
+        curtain = findViewById(R.id.curtain);
+        welldone = findViewById(R.id.welldone);
+        btnProceed = findViewById(R.id.btnProceed);
+        wrongflood1 = findViewById(R.id.wrongflood1);
+        btnOk = findViewById(R.id.btnOk);
+        thirdchoice = findViewById(R.id.thirdchoice);
+        fourthchoice = findViewById(R.id.fourthchoice);
+        mess_prompt2 = findViewById(R.id.mess_prompt2);
     }
 
     public void pageNext(View view) {
-        platform.setVisibility(platform.getVisibility() == View.VISIBLE ? View.GONE : View.VISIBLE);
-        floodCard.setVisibility(floodCard.getVisibility() == View.VISIBLE ? View.GONE : View.VISIBLE);
-        secondChoice.setVisibility(secondChoice.getVisibility() == View.VISIBLE ? View.GONE : View.VISIBLE);
-        firstChoice.setVisibility(firstChoice.getVisibility() == View.VISIBLE ? View.GONE: View.VISIBLE);
-        messFlood1.setVisibility(messFlood1.getVisibility() == View.VISIBLE ? View.GONE : View.VISIBLE);
-        btnExit.setVisibility(btnExit.getVisibility() == View.VISIBLE ? View.GONE : View.VISIBLE);
-        btnNext.setVisibility(btnNext.getVisibility() == View.VISIBLE ? View.GONE : View.VISIBLE);
-        btnPrev.setVisibility(btnPrev.getVisibility() == View.VISIBLE ? View.GONE : View.VISIBLE);
+        // visible
+        setVisibility(firstChoice, secondChoice, messFlood1, platform, floodCard);
+
+        // gone
+        setGone(
+                btnExit, btnNext, btnPrev,
+                curtain, welldone, btnProceed, wrongflood1, btnOk,
+                thirdchoice, fourthchoice, mess_prompt2
+        );
 
 
         // Change the background image
@@ -70,10 +74,63 @@ public class FloodStory extends AppCompatActivity {
 
     public void pageFirstChoice(View view) {
 
-        mainLayout.setBackgroundResource(R.drawable.welldone);
+        // visible
+        setVisibility(welldone, btnProceed, curtain);
+
+        // gone
+        setGone(
+                btnExit, btnNext, btnPrev, firstChoice
+                ,secondChoice, messFlood1,platform,floodCard, wrongflood1, btnOk,
+                thirdchoice, fourthchoice, mess_prompt2
+        );
+
+        mainLayout.setBackgroundResource(R.drawable.bg_plaindarken);
     }
 
     public void pageSecondChoice(View view) {
-        mainLayout.setBackgroundResource((R.drawable.wrong_flood1));
+        // visible
+        setVisibility(wrongflood1, btnOk);
+
+        // gone
+        setGone(
+                btnExit, btnNext, btnPrev, firstChoice
+                ,secondChoice, messFlood1,platform,floodCard, welldone, btnProceed,
+                thirdchoice, fourthchoice, mess_prompt2
+        );
+
+        mainLayout.setBackgroundResource((R.drawable.bg_plaindarken));
     }
+
+    public void btnProceedPage(View view) {
+        mainLayout.setBackgroundResource((R.drawable.f11));
+    }
+
+    public void btnOk(View view) {
+        // visible
+        setVisibility(firstChoice, secondChoice, messFlood1, platform, floodCard);
+
+        // gone
+        setGone(
+                btnExit, btnNext, btnPrev,
+                curtain, welldone, btnProceed, wrongflood1, btnOk,
+                thirdchoice, fourthchoice, mess_prompt2
+        );
+
+
+        // Change the background image
+        mainLayout.setBackgroundResource(R.drawable.bg_plaindarken);
+    }
+
+    private void setGone(View... views) {
+        for (View view : views) {
+            view.setVisibility(View.GONE);
+        }
+    }
+
+    private void setVisibility(View... views) {
+        for (View view : views) {
+            view.setVisibility(View.VISIBLE);
+        }
+    }
+
 }
