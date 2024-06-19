@@ -22,9 +22,11 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 public class FloodStory extends AppCompatActivity {
 
     private ConstraintLayout mainLayout;
+    private int i = 0, j = 0, k = 0;
     private ImageView
             platform,floodCard,secondChoice,firstChoice,messFlood1,btnPrev,btnNext,curtain,
-            welldone,btnProceed,wrongflood1,btnOk,thirdchoice,fourthchoice,mess_prompt2,btnExit;
+            welldone,btnProceed,wrongflood1,btnOk,thirdchoice,fourthchoice,messFlood2,btnExit,
+            wrongflood2, messFlood3, fifthchoice, sixthchoice, wrongflood3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,23 +51,71 @@ public class FloodStory extends AppCompatActivity {
         btnOk = findViewById(R.id.btnOk);
         thirdchoice = findViewById(R.id.thirdchoice);
         fourthchoice = findViewById(R.id.fourthchoice);
-        mess_prompt2 = findViewById(R.id.mess_prompt2);
+        messFlood2 = findViewById(R.id.mess_prompt2);
+        wrongflood2 = findViewById(R.id.wrong_flood2);
+        messFlood3 = findViewById(R.id.mess_flood3);
+        fifthchoice = findViewById(R.id.fifthchoice);
+        sixthchoice = findViewById(R.id.sixthchoice);
+        wrongflood3 = findViewById(R.id.wrong_flood3);
+
     }
 
     public void pageNext(View view) {
-        // visible
-        setVisibility(firstChoice, secondChoice, messFlood1, platform, floodCard);
 
-        // gone
-        setGone(
-                btnExit, btnNext, btnPrev,
-                curtain, welldone, btnProceed, wrongflood1, btnOk,
-                thirdchoice, fourthchoice, mess_prompt2
-        );
+        switch(i) {
+            case 0:
+                // visible
+                setVisibility(firstChoice, secondChoice, messFlood1, platform, floodCard);
+
+                // gone
+                setGone(
+                        btnExit, btnNext, btnPrev,
+                        curtain, welldone, btnProceed, wrongflood1, btnOk,
+                        thirdchoice, fourthchoice, messFlood2
+                );
+
+                // Change the background image
+                mainLayout.setBackgroundResource(R.drawable.bg_plaindarken);
+                i++;
+                break;
+
+            case 1:
+
+                // visible
+                setVisibility(thirdchoice, fourthchoice, messFlood2, platform, floodCard);
+
+                // gone
+                setGone(
+                        btnExit, btnNext, btnPrev,
+                        curtain, welldone, btnProceed, wrongflood1, btnOk,
+                        firstChoice, secondChoice, messFlood1, wrongflood2
+                );
+                mainLayout.setBackgroundResource(R.drawable.bg_plaindarken); // example resource
+                i++;
+                break;
+
+            case 2:
+
+                // visible
+                setVisibility(fifthchoice, sixthchoice, messFlood3, platform, floodCard);
+
+                // gone
+                setGone(
+                        btnExit, btnNext, btnPrev,
+                        curtain, welldone, btnProceed, wrongflood1, btnOk,
+                        firstChoice, secondChoice, thirdchoice, fourthchoice, wrongflood2, messFlood2,messFlood1
+                );
+                mainLayout.setBackgroundResource(R.drawable.bg_plaindarken);
+                i++;
+                break;
+            case 3:
 
 
-        // Change the background image
-        mainLayout.setBackgroundResource(R.drawable.bg_plaindarken);
+
+            default:
+                break;
+        }
+
     }
 
     public void pageBack(View view) {
@@ -81,7 +131,7 @@ public class FloodStory extends AppCompatActivity {
         setGone(
                 btnExit, btnNext, btnPrev, firstChoice
                 ,secondChoice, messFlood1,platform,floodCard, wrongflood1, btnOk,
-                thirdchoice, fourthchoice, mess_prompt2
+                thirdchoice, fourthchoice, messFlood2
         );
 
         mainLayout.setBackgroundResource(R.drawable.bg_plaindarken);
@@ -95,26 +145,109 @@ public class FloodStory extends AppCompatActivity {
         setGone(
                 btnExit, btnNext, btnPrev, firstChoice
                 ,secondChoice, messFlood1,platform,floodCard, welldone, btnProceed,
-                thirdchoice, fourthchoice, mess_prompt2
+                thirdchoice, fourthchoice, messFlood2
         );
 
         mainLayout.setBackgroundResource((R.drawable.bg_plaindarken));
     }
 
     public void btnProceedPage(View view) {
-        mainLayout.setBackgroundResource((R.drawable.f11));
+        switch(j) {
+            case 0:
+                // visible
+                setVisibility(btnExit, btnNext, btnPrev);
+
+                // gone
+                setGone(
+                        firstChoice, secondChoice, messFlood1, platform, floodCard,
+                        curtain, welldone, btnProceed, wrongflood1, btnOk,
+                        thirdchoice, fourthchoice, messFlood2
+                );
+
+                mainLayout.setBackgroundResource((R.drawable.f11));
+                j++;
+                break;
+            case 1:
+                // visible
+                setVisibility(btnExit, btnNext, btnPrev);
+
+                // gone
+                setGone(
+                        firstChoice, secondChoice, messFlood1, platform, floodCard,
+                        curtain, welldone, btnProceed, wrongflood1, btnOk,
+                        thirdchoice, fourthchoice, messFlood2
+                );
+
+                mainLayout.setBackgroundResource((R.drawable.f12));
+                j++;
+                break;
+            case 2:
+                // visible
+                setVisibility(btnExit, btnNext, btnPrev);
+
+                // gone
+                setGone(
+                        firstChoice, secondChoice, messFlood1, platform, floodCard,
+                        curtain, welldone, btnProceed, wrongflood1, btnOk,
+                        thirdchoice, fourthchoice, messFlood2
+                );
+
+                mainLayout.setBackgroundResource((R.drawable.f13));
+                j++;
+                break;
+            default:
+                break;
+        }
+
+
     }
 
     public void btnOk(View view) {
-        // visible
-        setVisibility(firstChoice, secondChoice, messFlood1, platform, floodCard);
+        switch(k){
+            case 0:
+                // visible
+                setVisibility(firstChoice, secondChoice, messFlood1, platform, floodCard);
 
-        // gone
-        setGone(
-                btnExit, btnNext, btnPrev,
-                curtain, welldone, btnProceed, wrongflood1, btnOk,
-                thirdchoice, fourthchoice, mess_prompt2
-        );
+                // gone
+                setGone(
+                        btnExit, btnNext, btnPrev,
+                        curtain, welldone, btnProceed, wrongflood1, btnOk,
+                        thirdchoice, fourthchoice, messFlood2, wrongflood2, wrongflood3
+                );
+                k++;
+                break;
+            case 1:
+                // visible
+                setVisibility(thirdchoice, fourthchoice, messFlood2, platform, floodCard);
+
+                // gone
+                setGone(
+                        btnExit, btnNext, btnPrev,
+                        curtain, welldone, btnProceed, wrongflood1, btnOk,
+                        firstChoice, secondChoice, messFlood1, wrongflood2, wrongflood3
+                );
+                mainLayout.setBackgroundResource(R.drawable.bg_plaindarken);
+                k++;
+                break;
+            case 2:
+                // visible
+                setVisibility(fifthchoice, sixthchoice, messFlood3, platform, floodCard);
+
+                // gone
+                setGone(
+                        btnExit, btnNext, btnPrev,
+                        curtain, welldone, btnProceed, wrongflood1, btnOk,
+                        firstChoice, secondChoice, messFlood1, wrongflood2,
+                        thirdchoice, fourthchoice, wrongflood3
+                );
+                mainLayout.setBackgroundResource(R.drawable.bg_plaindarken);
+                k++;
+                break;
+            default:
+                break;
+
+        }
+
 
 
         // Change the background image
@@ -133,4 +266,59 @@ public class FloodStory extends AppCompatActivity {
         }
     }
 
+    public void btnThirdChoice(View view) {
+        // visible
+        setVisibility(welldone, btnProceed, curtain);
+
+        // gone
+        setGone(
+                btnExit, btnNext, btnPrev, firstChoice
+                ,secondChoice, messFlood1,platform,floodCard, wrongflood1, btnOk,
+                thirdchoice, fourthchoice, messFlood2
+        );
+
+        mainLayout.setBackgroundResource(R.drawable.bg_plaindarken);
+    }
+
+    public void btnFourthChoice(View view) {
+        // visible
+        setVisibility(wrongflood2, btnOk);
+
+        // gone
+        setGone(
+                btnExit, btnNext, btnPrev, firstChoice
+                ,secondChoice, messFlood1,platform,floodCard, welldone, btnProceed,
+                thirdchoice, fourthchoice, messFlood2
+        );
+
+        mainLayout.setBackgroundResource((R.drawable.bg_plaindarken));
+    }
+
+    public void btnFifthChoice(View view) {
+        // visible
+        setVisibility(welldone, btnProceed, curtain);
+
+        // gone
+        setGone(
+                btnExit, btnNext, btnPrev, firstChoice
+                ,secondChoice, messFlood1,platform,floodCard, wrongflood1, btnOk,
+                thirdchoice, fourthchoice, messFlood2, messFlood3, fifthchoice, sixthchoice
+        );
+
+        mainLayout.setBackgroundResource(R.drawable.bg_plaindarken);
+    }
+
+    public void btnSixthChoice(View view) {
+        // visible
+        setVisibility(wrongflood3, btnOk);
+
+        // gone
+        setGone(
+                btnExit, btnNext, btnPrev, firstChoice
+                ,secondChoice, messFlood1,platform,floodCard, welldone, btnProceed,
+                thirdchoice, fourthchoice, messFlood2, fifthchoice, sixthchoice, messFlood3
+        );
+
+        mainLayout.setBackgroundResource((R.drawable.bg_plaindarken));
+    }
 }
