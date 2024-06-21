@@ -26,7 +26,8 @@ public class FloodStory extends AppCompatActivity {
     private ImageView
             platform,floodCard,secondChoice,firstChoice,messFlood1,btnPrev,btnNext,curtain,
             welldone,btnProceed,wrongflood1,btnOk,thirdchoice,fourthchoice,messFlood2,btnExit,
-            wrongflood2, messFlood3, fifthchoice, sixthchoice, wrongflood3;
+            wrongflood2, messFlood3, fifthchoice, sixthchoice, wrongflood3,
+            seventhChoice, eightchoice, messFlood4, wrongflood4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +58,10 @@ public class FloodStory extends AppCompatActivity {
         fifthchoice = findViewById(R.id.fifthchoice);
         sixthchoice = findViewById(R.id.sixthchoice);
         wrongflood3 = findViewById(R.id.wrong_flood3);
+        seventhChoice = findViewById(R.id.seventhChoice);
+        eightchoice = findViewById(R.id.eightChoice);
+        messFlood4 = findViewById(R.id.mess_flood4);
+        wrongflood4 = findViewById(R.id.wrong_flood4);
 
     }
 
@@ -109,8 +114,19 @@ public class FloodStory extends AppCompatActivity {
                 i++;
                 break;
             case 3:
+                // visible
+                setVisibility(seventhChoice, eightchoice, messFlood4, platform, floodCard);
 
-
+                // gone
+                setGone(
+                        btnExit, btnNext, btnPrev,
+                        curtain, welldone, btnProceed, wrongflood1, btnOk,
+                        firstChoice, secondChoice, thirdchoice, fourthchoice, wrongflood2, messFlood2,messFlood1,
+                        fifthchoice, sixthchoice, messFlood3
+                );
+                mainLayout.setBackgroundResource(R.drawable.bg_plaindarken);
+                i++;
+                break;
 
             default:
                 break;
@@ -320,5 +336,24 @@ public class FloodStory extends AppCompatActivity {
         );
 
         mainLayout.setBackgroundResource((R.drawable.bg_plaindarken));
+    }
+
+    public void btnSeventhChoice(View view) {
+        // visible
+        setVisibility(welldone, btnProceed, curtain);
+
+        // gone
+        setGone(
+                btnExit, btnNext, btnPrev, firstChoice
+                ,secondChoice, messFlood1,platform,floodCard, wrongflood1, btnOk,
+                thirdchoice, fourthchoice, messFlood2, messFlood3, fifthchoice, sixthchoice,
+                seventhChoice, eightchoice, messFlood4
+        );
+
+        mainLayout.setBackgroundResource(R.drawable.bg_plaindarken);
+    }
+
+    public void btnEightChoice(View view) {
+
     }
 }

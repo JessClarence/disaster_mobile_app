@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/f10"
+     android:background="@drawable/f10"
     tools:context=".FloodStory">
 
  <!--first page-->
@@ -297,6 +297,59 @@
      app:layout_constraintStart_toStartOf="parent"
      app:layout_constraintTop_toTopOf="parent"
      app:srcCompat="@drawable/wrong_flood3" />
+
+ <ImageView
+     android:id="@+id/seventhChoice"
+     android:layout_width="154dp"
+     android:layout_height="137dp"
+     android:visibility="gone"
+     android:onClick="btnSeventhChoice"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintHorizontal_bias="0.265"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent"
+     app:layout_constraintVertical_bias="0.62"
+     app:srcCompat="@drawable/fl_2_7" />
+
+ <ImageView
+     android:id="@+id/eightChoice"
+     android:layout_width="154dp"
+     android:layout_height="137dp"
+     android:visibility="gone"
+     android:onClick="btnEightChoice"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintHorizontal_bias="0.74"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent"
+     app:layout_constraintVertical_bias="0.62"
+     app:srcCompat="@drawable/fl_2_8" />
+
+ <ImageView
+     android:id="@+id/mess_flood4"
+     android:layout_width="522dp"
+     android:layout_height="81dp"
+     android:visibility="gone"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintHorizontal_bias="0.497"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent"
+     app:layout_constraintVertical_bias="0.951"
+     app:srcCompat="@drawable/prompt_mess_flood4" />
+
+ <ImageView
+     android:id="@+id/wrong_flood4"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:visibility="gone"
+     android:layout_marginTop="16dp"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintEnd_toEndOf="parent"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent"
+     app:srcCompat="@drawable/wrong_flood4" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
