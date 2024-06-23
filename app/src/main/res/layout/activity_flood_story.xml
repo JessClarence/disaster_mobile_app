@@ -50,6 +50,7 @@
      android:layout_width="65dp"
      android:layout_height="62dp"
      android:visibility="visible"
+     android:onClick="pageExit"
      app:layout_constraintBottom_toBottomOf="parent"
      app:layout_constraintEnd_toEndOf="parent"
      app:layout_constraintHorizontal_bias="0.975"

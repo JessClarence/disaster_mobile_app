@@ -23,7 +23,8 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 public class FloodStory extends AppCompatActivity {
 
     private ConstraintLayout mainLayout;
-    private int i = 0, j = 0, k = 0;
+    private boolean firstOk = false, secondOk = false, thirdOk = false, fourthOk = false, fifthOk = false, sixthOk = false;
+    private int i = 0, j = 0;
     private ImageView
             platform,floodCard,secondChoice,firstChoice,messFlood1,btnPrev,btnNext,curtain,
             welldone,btnProceed,wrongflood1,btnOk,thirdchoice,fourthchoice,messFlood2,btnExit,
@@ -176,7 +177,7 @@ public class FloodStory extends AppCompatActivity {
     }
 
     public void pageBack(View view) {
-
+        startActivity(new Intent(FloodStory.this, StartPage.class));
     }
 
     public void pageFirstChoice(View view) {
@@ -222,7 +223,6 @@ public class FloodStory extends AppCompatActivity {
                 );
 
                 mainLayout.setBackgroundResource((R.drawable.f11));
-                j++;
                 break;
             case 1:
                 // visible
@@ -236,7 +236,6 @@ public class FloodStory extends AppCompatActivity {
                 );
 
                 mainLayout.setBackgroundResource((R.drawable.f12));
-                j++;
                 break;
             case 2:
                 // visible
@@ -250,7 +249,6 @@ public class FloodStory extends AppCompatActivity {
                 );
 
                 mainLayout.setBackgroundResource((R.drawable.f13));
-                j++;
                 break;
             case 3:
                 // visible
@@ -264,7 +262,6 @@ public class FloodStory extends AppCompatActivity {
                 );
 
                 mainLayout.setBackgroundResource((R.drawable.f14));
-                j++;
                 break;
             case 4:
                 // visible
@@ -278,7 +275,6 @@ public class FloodStory extends AppCompatActivity {
                 );
 
                 mainLayout.setBackgroundResource((R.drawable.f15));
-                j++;
                 break;
             case 5:
                 // visible
@@ -292,7 +288,6 @@ public class FloodStory extends AppCompatActivity {
                 );
 
                 mainLayout.setBackgroundResource((R.drawable.end_flood));
-                j++;
                 break;
             case 6:
                 startActivity(new Intent(FloodStory.this, StartPage.class));
@@ -300,12 +295,11 @@ public class FloodStory extends AppCompatActivity {
             default:
                 break;
         }
-
-
+        j++;
     }
 
     public void btnOk(View view) {
-        switch(k){
+        switch(j){
             case 0:
                 // visible
                 setVisibility(firstChoice, secondChoice, messFlood1, platform, floodCard);
@@ -316,7 +310,6 @@ public class FloodStory extends AppCompatActivity {
                         curtain, welldone, btnProceed, wrongflood1, btnOk,
                         thirdchoice, fourthchoice, messFlood2, wrongflood2, wrongflood3
                 );
-                k++;
                 break;
             case 1:
                 // visible
@@ -329,7 +322,6 @@ public class FloodStory extends AppCompatActivity {
                         firstChoice, secondChoice, messFlood1, wrongflood2, wrongflood3
                 );
                 mainLayout.setBackgroundResource(R.drawable.bg_plaindarken);
-                k++;
                 break;
             case 2:
                 // visible
@@ -343,7 +335,6 @@ public class FloodStory extends AppCompatActivity {
                         thirdchoice, fourthchoice, wrongflood3
                 );
                 mainLayout.setBackgroundResource(R.drawable.bg_plaindarken);
-                k++;
                 break;
             case 3:
                 // visible
@@ -358,7 +349,6 @@ public class FloodStory extends AppCompatActivity {
                         sixthchoice, wrongflood4
                 );
                 mainLayout.setBackgroundResource(R.drawable.bg_plaindarken);
-                k++;
                 break;
             case 4:
                 // visible
@@ -374,7 +364,6 @@ public class FloodStory extends AppCompatActivity {
                         messFlood4, wrongflood5
                 );
                 mainLayout.setBackgroundResource(R.drawable.bg_plaindarken);
-                k++;
                 break;
             case 5:
                 // visible
@@ -391,15 +380,11 @@ public class FloodStory extends AppCompatActivity {
                         wrongflood6
                 );
                 mainLayout.setBackgroundResource(R.drawable.bg_plaindarken);
-                k++;
                 break;
             default:
-                break;
+                return;
 
         }
-
-
-
         // Change the background image
         mainLayout.setBackgroundResource(R.drawable.bg_plaindarken);
     }
@@ -563,4 +548,9 @@ public class FloodStory extends AppCompatActivity {
 
         mainLayout.setBackgroundResource((R.drawable.bg_plaindarken));
     }
+
+    public void pageExit(View view) {
+        startActivity(new Intent(FloodStory.this, StartPage.class));
+    }
+
 }
