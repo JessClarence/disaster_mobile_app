@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/q16"
+    tools:context=".QuakeStory">
+
+
+    <ImageView
+        android:id="@+id/btnPrev"
+        android:layout_width="103dp"
+        android:layout_height="50dp"
+        android:background="@null"
+        android:contentDescription="@string/desc_manual_button_back"
+        android:onClick="pageBack"
+        android:scaleType="fitCenter"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.071"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.988"
+        app:srcCompat="@drawable/button_back"
+        tools:ignore="UsingOnClickInXml" />
+    <!--first page-->
+
+    <!--first page-->
+    <ImageView
+        android:id="@+id/btnExit"
+        android:layout_width="65dp"
+        android:layout_height="62dp"
+        android:visibility="visible"
+        android:onClick="pageExit"
+        android:contentDescription="@string/desc_manual_button_close"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.975"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.017"
+        app:srcCompat="@drawable/button_close" />
+
+    <ImageView
+        android:id="@+id/btnNext"
+        android:layout_width="103dp"
+        android:layout_height="50dp"
+        android:background="@null"
+        android:onClick="pageNext"
+        android:visibility="visible"
+        android:contentDescription="@string/desc_manual_button_next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.936"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.988"
+        app:srcCompat="@drawable/button_next" />
+    <!--second page-->
+    <ImageView
+        android:id="@+id/platform"
+        android:layout_width="753dp"
+        android:layout_height="671dp"
+        android:layout_marginTop="12dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/template_blue" />
+
+    <ImageView
+        android:id="@+id/flood_card"
+        android:layout_width="748dp"
+        android:layout_height="378dp"
+        android:visibility="gone"
+        android:contentDescription="@string/desc_manual_button_next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.45"
+        app:srcCompat="@drawable/template_prompt_quake" />
+
+    <!--second page-->
+    <ImageView
+        android:id="@+id/first_choice"
+        android:layout_width="154dp"
+        android:layout_height="137dp"
+        android:onClick="pageFirstChoice"
+        android:visibility="gone"
+        android:contentDescription="@string/desc_manual_button_next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.325"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.69"
+        app:srcCompat="@drawable/qa_3_1" />
+
+    <ImageView
+        android:id="@+id/second_choice"
+        android:layout_width="154dp"
+        android:layout_height="137dp"
+        android:onClick="pageSecondChoice"
+        android:visibility="gone"
+        android:contentDescription="@string/desc_manual_button_next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.672"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.69"
+        app:srcCompat="@drawable/qa_3_2" />
+
+
+    <!--second page-->
+
+    <ImageView
+        android:id="@+id/mess_quake1"
+        android:layout_width="525dp"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/flood_card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.97"
+        app:srcCompat="@drawable/prompt_mess_q1" />
+
+    <!--right page-->
+    <ImageView
+        android:id="@+id/curtain"
+        android:layout_width="801dp"
+        android:layout_height="440dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.191"
+        app:srcCompat="@drawable/curtains" />
+    <!--right page-->
+    <ImageView
+        android:id="@+id/welldone"
+        android:layout_width="649dp"
+        android:layout_height="368dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/curtain"
+        app:srcCompat="@drawable/welldone" />
+
+    <!--right page-->
+    <ImageView
+        android:id="@+id/btnProceed"
+        android:layout_width="93dp"
+        android:layout_height="97dp"
+        android:background="@null"
+        android:onClick="btnProceedPage"
+        android:visibility="gone"
+        android:contentDescription="@string/desc_manual_button_next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.838"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.824"
+        app:srcCompat="@drawable/button_proceed" />
+
+    <ImageView
+        android:id="@+id/wrongquake1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/wrong_quake1" />
+    <!--3rd wrong page-->
+    <ImageView
+        android:id="@+id/btnOk"
+        android:layout_width="103dp"
+        android:layout_height="89dp"
+        android:background="@null"
+        android:onClick="btnOk"
+        android:visibility="gone"
+        android:contentDescription="@string/desc_button_Ok"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.816"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.841"
+        app:srcCompat="@drawable/button_ok" />
+
+
+
+    <ImageView
+        android:id="@+id/third_choice"
+        android:layout_width="154dp"
+        android:layout_height="137dp"
+        android:onClick="pageThirdChoice"
+        android:visibility="gone"
+        android:contentDescription="@string/desc_manual_button_next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.325"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.69"
+        app:srcCompat="@drawable/qa_3_3" />
+
+    <ImageView
+        android:id="@+id/fourth_choice"
+        android:layout_width="154dp"
+        android:layout_height="137dp"
+        android:onClick="pageFourthChoice"
+        android:visibility="gone"
+        android:contentDescription="@string/desc_manual_button_next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.672"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.69"
+        app:srcCompat="@drawable/qa_3_4" />
+
+    <ImageView
+        android:id="@+id/mess_quake2"
+        android:layout_width="525dp"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/flood_card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.97"
+        app:srcCompat="@drawable/prompt_mess_q2" />
+
+    <ImageView
+        android:id="@+id/wrongquake2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/wrong_quake2" />
+
+    <ImageView
+        android:id="@+id/fifth_choice"
+        android:layout_width="154dp"
+        android:layout_height="137dp"
+        android:onClick="pageFifthChoice"
+        android:visibility="gone"
+        android:contentDescription="@string/desc_manual_button_next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.325"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.69"
+        app:srcCompat="@drawable/qa_3_5" />
+
+    <ImageView
+        android:id="@+id/sixth_choice"
+        android:layout_width="154dp"
+        android:layout_height="137dp"
+        android:onClick="pageSixthChoice"
+        android:visibility="gone"
+        android:contentDescription="@string/desc_manual_button_next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.672"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.69"
+        app:srcCompat="@drawable/qa_3_6" />
+
+    <ImageView
+        android:id="@+id/mess_quake3"
+        android:layout_width="525dp"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/flood_card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.97"
+        app:srcCompat="@drawable/prompt_mess_q3" />
+
+    <ImageView
+        android:id="@+id/wrongquake3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/wrong_quake3" />
+
+
+    <ImageView
+        android:id="@+id/seventh_choice"
+        android:layout_width="154dp"
+        android:layout_height="137dp"
+        android:onClick="pageSeventhChoice"
+        android:visibility="gone"
+        android:contentDescription="@string/desc_manual_button_next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.325"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.69"
+        app:srcCompat="@drawable/qa_3_7" />
+
+    <ImageView
+        android:id="@+id/eight_choice"
+        android:layout_width="154dp"
+        android:layout_height="137dp"
+        android:onClick="pageEightChoice"
+        android:visibility="gone"
+        android:contentDescription="@string/desc_manual_button_next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.672"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.69"
+        app:srcCompat="@drawable/qa_3_8" />
+
+    <ImageView
+        android:id="@+id/mess_quake4"
+        android:layout_width="525dp"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/flood_card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.97"
+        app:srcCompat="@drawable/prompt_mess_q4" />
+
+    <ImageView
+        android:id="@+id/wrongquake4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/wrong_quake4" />
+
+
+    <ImageView
+        android:id="@+id/ninth_choice"
+        android:layout_width="154dp"
+        android:layout_height="137dp"
+        android:onClick="pageNinthChoice"
+        android:visibility="gone"
+        android:contentDescription="@string/desc_manual_button_next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.325"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.69"
+        app:srcCompat="@drawable/qa_3_9" />
+
+    <ImageView
+        android:id="@+id/tenth_choice"
+        android:layout_width="154dp"
+        android:layout_height="137dp"
+        android:onClick="pageTenthChoice"
+        android:visibility="gone"
+        android:contentDescription="@string/desc_manual_button_next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.672"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.69"
+        app:srcCompat="@drawable/qa_3_10" />
+
+    <ImageView
+        android:id="@+id/mess_quake5"
+        android:layout_width="525dp"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/flood_card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.97"
+        app:srcCompat="@drawable/prompt_mess_q5" />
+
+    <ImageView
+        android:id="@+id/wrongquake5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/wrong_quake5" />
+
+
+    <ImageView
+        android:id="@+id/eleventh_choice"
+        android:layout_width="154dp"
+        android:layout_height="137dp"
+        android:onClick="pageEleventhChoice"
+        android:visibility="gone"
+        android:contentDescription="@string/desc_manual_button_next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.325"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.69"
+        app:srcCompat="@drawable/qa_3_11" />
+
+    <ImageView
+        android:id="@+id/twelve_choice"
+        android:layout_width="154dp"
+        android:layout_height="137dp"
+        android:onClick="pageTwelveChoice"
+        android:visibility="gone"
+        android:contentDescription="@string/desc_manual_button_next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.672"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.69"
+        app:srcCompat="@drawable/qa_3_12" />
+
+    <ImageView
+        android:id="@+id/mess_quake6"
+        android:layout_width="525dp"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/flood_card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.97"
+        app:srcCompat="@drawable/prompt_mess_q6" />
+
+    <ImageView
+        android:id="@+id/wrongquake6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/wrong_quake6" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

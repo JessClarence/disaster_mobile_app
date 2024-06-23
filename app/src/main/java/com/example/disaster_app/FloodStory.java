@@ -23,7 +23,6 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 public class FloodStory extends AppCompatActivity {
 
     private ConstraintLayout mainLayout;
-    private boolean firstOk = false, secondOk = false, thirdOk = false, fourthOk = false, fifthOk = false, sixthOk = false;
     private int i = 0, j = 0;
     private ImageView
             platform,floodCard,secondChoice,firstChoice,messFlood1,btnPrev,btnNext,curtain,

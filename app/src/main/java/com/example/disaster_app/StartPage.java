@@ -40,4 +40,8 @@ public class StartPage extends AppCompatActivity {
     public void floodPage(View view) {
         startActivity(new Intent(StartPage.this, FloodStory.class));
     }
+
+    public void quakePage(View view) {
+        startActivity(new Intent(StartPage.this, QuakeStory.class));
+    }
 }
