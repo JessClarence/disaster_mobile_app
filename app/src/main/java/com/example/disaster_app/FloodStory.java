@@ -1,5 +1,6 @@
 package com.example.disaster_app;
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
@@ -27,7 +28,9 @@ public class FloodStory extends AppCompatActivity {
             platform,floodCard,secondChoice,firstChoice,messFlood1,btnPrev,btnNext,curtain,
             welldone,btnProceed,wrongflood1,btnOk,thirdchoice,fourthchoice,messFlood2,btnExit,
             wrongflood2, messFlood3, fifthchoice, sixthchoice, wrongflood3,
-            seventhChoice, eightchoice, messFlood4, wrongflood4;
+            seventhChoice, eightchoice, messFlood4, wrongflood4,
+            ninthChoice, tenthChoice, messFlood5, wrongflood5,
+            eleventhChoice, twelveChoice, messFlood6, wrongflood6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +65,14 @@ public class FloodStory extends AppCompatActivity {
         eightchoice = findViewById(R.id.eightChoice);
         messFlood4 = findViewById(R.id.mess_flood4);
         wrongflood4 = findViewById(R.id.wrong_flood4);
+        ninthChoice = findViewById(R.id.ninthchoice);
+        tenthChoice = findViewById(R.id.tenthchoice);
+        messFlood5 = findViewById(R.id.mess_flood5);
+        wrongflood5 = findViewById(R.id.wrong_flood5);
+        eleventhChoice = findViewById(R.id.eleventhchoice);
+        twelveChoice = findViewById(R.id.twelvechoice);
+        messFlood6 = findViewById(R.id.mess_flood6);
+        wrongflood6 = findViewById(R.id.wrong_flood6);
 
     }
 
@@ -123,6 +134,36 @@ public class FloodStory extends AppCompatActivity {
                         curtain, welldone, btnProceed, wrongflood1, btnOk,
                         firstChoice, secondChoice, thirdchoice, fourthchoice, wrongflood2, messFlood2,messFlood1,
                         fifthchoice, sixthchoice, messFlood3
+                );
+                mainLayout.setBackgroundResource(R.drawable.bg_plaindarken);
+                i++;
+                break;
+
+            case 4:
+                // visible
+                setVisibility(ninthChoice, tenthChoice, messFlood5, platform, floodCard);
+
+                // gone
+                setGone(
+                        btnExit, btnNext, btnPrev,
+                        curtain, welldone, btnProceed, wrongflood1, btnOk,
+                        firstChoice, secondChoice, thirdchoice, fourthchoice, wrongflood2, messFlood2,messFlood1,
+                        fifthchoice, sixthchoice, messFlood3,seventhChoice, eightchoice, messFlood4
+                );
+                mainLayout.setBackgroundResource(R.drawable.bg_plaindarken);
+                i++;
+                break;
+            case 5:
+                // visible
+                setVisibility(eleventhChoice, twelveChoice, messFlood6, platform, floodCard);
+
+                // gone
+                setGone(
+                        btnExit, btnNext, btnPrev,
+                        curtain, welldone, btnProceed, wrongflood1, btnOk,
+                        firstChoice, secondChoice, thirdchoice, fourthchoice, wrongflood2, messFlood2,messFlood1,
+                        fifthchoice, sixthchoice, messFlood3,seventhChoice, eightchoice, messFlood4,
+                        ninthChoice, tenthChoice, messFlood5
                 );
                 mainLayout.setBackgroundResource(R.drawable.bg_plaindarken);
                 i++;
@@ -211,6 +252,51 @@ public class FloodStory extends AppCompatActivity {
                 mainLayout.setBackgroundResource((R.drawable.f13));
                 j++;
                 break;
+            case 3:
+                // visible
+                setVisibility(btnExit, btnNext, btnPrev);
+
+                // gone
+                setGone(
+                        firstChoice, secondChoice, messFlood1, platform, floodCard,
+                        curtain, welldone, btnProceed, wrongflood1, btnOk,
+                        thirdchoice, fourthchoice, messFlood2
+                );
+
+                mainLayout.setBackgroundResource((R.drawable.f14));
+                j++;
+                break;
+            case 4:
+                // visible
+                setVisibility(btnExit, btnNext, btnPrev);
+
+                // gone
+                setGone(
+                        firstChoice, secondChoice, messFlood1, platform, floodCard,
+                        curtain, welldone, btnProceed, wrongflood1, btnOk,
+                        thirdchoice, fourthchoice, messFlood2
+                );
+
+                mainLayout.setBackgroundResource((R.drawable.f15));
+                j++;
+                break;
+            case 5:
+                // visible
+                setVisibility(btnProceed);
+
+                // gone
+                setGone(
+                        firstChoice, secondChoice, messFlood1, platform, floodCard,
+                        curtain, welldone, wrongflood1, btnOk,
+                        thirdchoice, fourthchoice, messFlood2
+                );
+
+                mainLayout.setBackgroundResource((R.drawable.end_flood));
+                j++;
+                break;
+            case 6:
+                startActivity(new Intent(FloodStory.this, StartPage.class));
+                break;
             default:
                 break;
         }
@@ -255,6 +341,54 @@ public class FloodStory extends AppCompatActivity {
                         curtain, welldone, btnProceed, wrongflood1, btnOk,
                         firstChoice, secondChoice, messFlood1, wrongflood2,
                         thirdchoice, fourthchoice, wrongflood3
+                );
+                mainLayout.setBackgroundResource(R.drawable.bg_plaindarken);
+                k++;
+                break;
+            case 3:
+                // visible
+                setVisibility(seventhChoice, eightchoice, messFlood4, platform, floodCard);
+
+                // gone
+                setGone(
+                        btnExit, btnNext, btnPrev,
+                        curtain, welldone, btnProceed, wrongflood1, btnOk,
+                        firstChoice, secondChoice, messFlood1, wrongflood2,
+                        thirdchoice, fourthchoice, wrongflood3, fifthchoice,
+                        sixthchoice, wrongflood4
+                );
+                mainLayout.setBackgroundResource(R.drawable.bg_plaindarken);
+                k++;
+                break;
+            case 4:
+                // visible
+                setVisibility(ninthChoice, tenthChoice, messFlood5, platform, floodCard);
+
+                // gone
+                setGone(
+                        btnExit, btnNext, btnPrev,
+                        curtain, welldone, btnProceed, wrongflood1, btnOk,
+                        firstChoice, secondChoice, messFlood1, wrongflood2,
+                        thirdchoice, fourthchoice, wrongflood3, fifthchoice,
+                        sixthchoice, wrongflood4, seventhChoice, eightchoice,
+                        messFlood4, wrongflood5
+                );
+                mainLayout.setBackgroundResource(R.drawable.bg_plaindarken);
+                k++;
+                break;
+            case 5:
+                // visible
+                setVisibility(eleventhChoice, twelveChoice, messFlood6, platform, floodCard);
+
+                // gone
+                setGone(
+                        btnExit, btnNext, btnPrev,
+                        curtain, welldone, btnProceed, wrongflood1, btnOk,
+                        firstChoice, secondChoice, messFlood1, wrongflood2,
+                        thirdchoice, fourthchoice, wrongflood3, fifthchoice,
+                        sixthchoice, wrongflood4, seventhChoice, eightchoice,
+                        messFlood4, wrongflood5, ninthChoice, tenthChoice, messFlood5,
+                        wrongflood6
                 );
                 mainLayout.setBackgroundResource(R.drawable.bg_plaindarken);
                 k++;
@@ -354,6 +488,79 @@ public class FloodStory extends AppCompatActivity {
     }
 
     public void btnEightChoice(View view) {
+        // visible
+        setVisibility(wrongflood4, btnOk);
 
+        // gone
+        setGone(
+                btnExit, btnNext, btnPrev, firstChoice
+                ,secondChoice, messFlood1,platform,floodCard, welldone, btnProceed,
+                thirdchoice, fourthchoice, messFlood2, fifthchoice, sixthchoice, messFlood3,
+                seventhChoice, eightchoice, messFlood4
+        );
+
+        mainLayout.setBackgroundResource((R.drawable.bg_plaindarken));
+    }
+
+    public void btnNinthChoice(View view) {
+        // visible
+        setVisibility(wrongflood5, btnOk);
+
+        // gone
+        setGone(
+                btnExit, btnNext, btnPrev, firstChoice
+                ,secondChoice, messFlood1,platform,floodCard, welldone, btnProceed,
+                thirdchoice, fourthchoice, messFlood2, fifthchoice, sixthchoice, messFlood3,
+                seventhChoice, eightchoice, messFlood4, ninthChoice, tenthChoice, messFlood5
+        );
+
+        mainLayout.setBackgroundResource((R.drawable.bg_plaindarken));
+    }
+
+    public void btnTenthChoice(View view) {
+        // visible
+        setVisibility(welldone, btnProceed, curtain);
+
+        // gone
+        setGone(
+                btnExit, btnNext, btnPrev, firstChoice
+                ,secondChoice, messFlood1,platform,floodCard, wrongflood1, btnOk,
+                thirdchoice, fourthchoice, messFlood2, messFlood3, fifthchoice, sixthchoice,
+                seventhChoice, eightchoice, messFlood4, ninthChoice, tenthChoice, messFlood5
+        );
+
+        mainLayout.setBackgroundResource(R.drawable.bg_plaindarken);
+    }
+
+    public void pageEleventhChoice(View view) {
+        // visible
+        setVisibility(welldone, btnProceed, curtain);
+
+        // gone
+        setGone(
+                btnExit, btnNext, btnPrev, firstChoice
+                ,secondChoice, messFlood1,platform,floodCard, wrongflood1, btnOk,
+                thirdchoice, fourthchoice, messFlood2, messFlood3, fifthchoice, sixthchoice,
+                seventhChoice, eightchoice, messFlood4, ninthChoice, tenthChoice, messFlood5,
+                eleventhChoice, twelveChoice, messFlood6
+        );
+
+        mainLayout.setBackgroundResource(R.drawable.bg_plaindarken);
+    }
+
+    public void pageTwelveChoice(View view) {
+        // visible
+        setVisibility(wrongflood6, btnOk);
+
+        // gone
+        setGone(
+                btnExit, btnNext, btnPrev, firstChoice
+                ,secondChoice, messFlood1,platform,floodCard, welldone, btnProceed,
+                thirdchoice, fourthchoice, messFlood2, fifthchoice, sixthchoice, messFlood3,
+                seventhChoice, eightchoice, messFlood4, ninthChoice, tenthChoice, messFlood5,
+                eleventhChoice, twelveChoice, messFlood6
+        );
+
+        mainLayout.setBackgroundResource((R.drawable.bg_plaindarken));
     }
 }
