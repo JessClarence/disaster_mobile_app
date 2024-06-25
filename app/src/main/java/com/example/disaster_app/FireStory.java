@@ -13,24 +13,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class FireStory extends AppCompatActivity {
-    private int[] drawableResources = {
-            R.drawable.frame1,
-            R.drawable.frame2,
-            R.drawable.frame3,
-            R.drawable.frame4,
-            R.drawable.frame4_1,
-            R.drawable.frame4_2,
-            R.drawable.frame4_3,
-            R.drawable.frame5,
-            R.drawable.frame6,
-            R.drawable.frame7,
-            R.drawable.frame8,
-            R.drawable.frame9,
-            R.drawable.frame10,
-            R.drawable.frame11,
-            R.drawable.frame12,
-            R.drawable.frame13,
-            R.drawable.frame14};
+
+    private ConstraintLayout mainLayout;
+
     private int i = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,20 +23,60 @@ public class FireStory extends AppCompatActivity {
         setContentView(R.layout.activity_fire_story);
 
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+
+        mainLayout = findViewById(R.id.main);
     }
 
-    public void closePage(View view) {
+    public void pageBack(View view) {
         startActivity(new Intent(FireStory.this, StartPage.class));
     }
 
-    public void nextPage(View view) {
-        ConstraintLayout layout = findViewById(R.id.main);
 
-        if (i < drawableResources.length) {
-            layout.setBackgroundResource(drawableResources[i]);
-            i++;
-        } else {
-            i = 0;
+    public void pageNext(View view) {
+        switch(i){
+            case 0:
+                i++;
+                mainLayout.setBackgroundResource(R.drawable.fire_scene2);
+                break;
+            case 1:
+                i++;
+                mainLayout.setBackgroundResource(R.drawable.fire_scene3);
+                break;
+            case 2:
+                i++;
+                mainLayout.setBackgroundResource(R.drawable.fire_scene4);
+                break;
+            case 3:
+                i++;
+                mainLayout.setBackgroundResource(R.drawable.fire_scene4_1);
+                break;
+            case 4:
+                i++;
+                mainLayout.setBackgroundResource(R.drawable.fire_scene4_2);
+                break;
+            case 5:
+                i++;
+                mainLayout.setBackgroundResource(R.drawable.fire_scene4_3);
+                break;
+            default:
+                break;
         }
+
+    }
+
+    public void pageExit(View view) {
+        startActivity(new Intent(FireStory.this, StartPage.class));
+    }
+
+    public void pageFirstChoice(View view) {
+
+    }
+
+    public void pageSecondChoice(View view) {
+
+    }
+
+    public void pageThirdChoice(View view) {
+
     }
 }

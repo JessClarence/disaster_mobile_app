@@ -5,38 +5,139 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/frame1"
+    android:background="@drawable/fire_scene1"
     tools:context=".FireStory">
 
-    <ImageButton
-        android:id="@+id/btnClose"
-        android:layout_width="68dp"
-        android:layout_height="67dp"
-        android:background="@null"
-        android:scaleType="fitCenter"
-        android:contentDescription="@string/desc_manual_button_close"
-        android:onClick="closePage"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.956"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.008"
-        app:srcCompat="@drawable/button_close" />
+    <!--first page-->
 
-    <ImageButton
-        android:id="@+id/btnNext"
-        android:layout_width="104dp"
+    <ImageView
+        android:id="@+id/btnPrev"
+        android:layout_width="103dp"
         android:layout_height="50dp"
         android:background="@null"
+        android:contentDescription="@string/desc_manual_button_back"
+        android:onClick="pageBack"
         android:scaleType="fitCenter"
-        android:contentDescription="@string/desc_manual_button_next"
-        android:onClick="nextPage"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.904"
+        app:layout_constraintHorizontal_bias="0.071"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.956"
-        app:srcCompat="@drawable/button_next" />
+        app:layout_constraintVertical_bias="0.988"
+        app:srcCompat="@drawable/button_back" />
+    <!--first page-->
+    <ImageView
+        android:id="@+id/btnNext"
+        android:layout_width="103dp"
+        android:layout_height="50dp"
+        android:background="@null"
+        android:contentDescription="@string/desc_manual_button_next"
+        android:onClick="pageNext"
+        android:scaleType="fitCenter"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.926"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.988"
+        app:srcCompat="@drawable/button_next"
+        tools:ignore="UsingOnClickInXml" />
+    <!--first page-->
+    <ImageView
+        android:id="@+id/btnExit"
+        android:layout_width="65dp"
+        android:layout_height="62dp"
+        android:visibility="visible"
+        android:onClick="pageExit"
+        android:contentDescription="@string/desc_manual_button_close"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.975"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.017"
+        app:srcCompat="@drawable/button_close" />
+
+
+    <!--second page-->
+    <ImageView
+        android:id="@+id/platform"
+        android:layout_width="753dp"
+        android:layout_height="671dp"
+        android:layout_marginTop="12dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/template_blue" />
+
+    <ImageView
+        android:id="@+id/fire_card1"
+        android:layout_width="748dp"
+        android:layout_height="378dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.45"
+        app:srcCompat="@drawable/fire_prompt1" />
+    <!--second page-->
+
+    <ImageView
+        android:id="@+id/first_choice"
+        android:layout_width="154dp"
+        android:layout_height="137dp"
+        android:contentDescription="@string/desc_manual_button_next"
+        android:onClick="pageFirstChoice"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.227"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.689"
+        app:srcCompat="@drawable/fi1" />
+
+    <ImageView
+        android:id="@+id/second_choice"
+        android:layout_width="154dp"
+        android:layout_height="137dp"
+        android:contentDescription="@string/desc_manual_button_next"
+        android:onClick="pageSecondChoice"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.689"
+        app:srcCompat="@drawable/fi2" />
+
+    <ImageView
+        android:id="@+id/third_choice"
+        android:layout_width="154dp"
+        android:layout_height="137dp"
+        android:contentDescription="@string/desc_manual_button_next"
+        android:onClick="pageThirdChoice"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.77"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.689"
+        app:srcCompat="@drawable/fi3" />
+
+
+    <!--second page-->
+
+
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
