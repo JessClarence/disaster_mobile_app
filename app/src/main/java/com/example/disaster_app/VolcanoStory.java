@@ -85,19 +85,19 @@ public class VolcanoStory extends AppCompatActivity {
         switch(i){
             case 0:
                 i++;
-                mainLayout.setBackgroundResource(R.drawable.vframe2);
+                mainLayout.setBackgroundResource(R.drawable.volcano_scene2);
                 break;
             case 1:
                 i++;
-                mainLayout.setBackgroundResource(R.drawable.vframe3);
+                mainLayout.setBackgroundResource(R.drawable.volcano_scene3);
                 break;
             case 2:
                 i++;
-                mainLayout.setBackgroundResource(R.drawable.vframe4);
+                mainLayout.setBackgroundResource(R.drawable.volcano_scene4);
                 break;
             case 3:
                 i++;
-                mainLayout.setBackgroundResource(R.drawable.vframe5);
+                mainLayout.setBackgroundResource(R.drawable.volcano_scene5);
                 break;
             case 4:
                 // visible
@@ -112,11 +112,11 @@ public class VolcanoStory extends AppCompatActivity {
                 break;
             case 5:
                 i++;
-                mainLayout.setBackgroundResource(R.drawable.vframe7);
+                mainLayout.setBackgroundResource(R.drawable.volcano_scene7);
                 break;
             case 6:
                 i++;
-                mainLayout.setBackgroundResource(R.drawable.vframe8);
+                mainLayout.setBackgroundResource(R.drawable.volcano_scene8);
                 break;
             case 7:
                 // visible
@@ -131,7 +131,7 @@ public class VolcanoStory extends AppCompatActivity {
                 break;
             case 8:
                 i++;
-                mainLayout.setBackgroundResource(R.drawable.vframe10);
+                mainLayout.setBackgroundResource(R.drawable.volcano_scene10);
                 break;
             case 9:
                 // visible
@@ -146,7 +146,7 @@ public class VolcanoStory extends AppCompatActivity {
                 break;
             case 10:
                 i++;
-                mainLayout.setBackgroundResource(R.drawable.vframe12);
+                mainLayout.setBackgroundResource(R.drawable.volcano_scene12);
                 break;
             case 11:
                 // visible
@@ -161,15 +161,15 @@ public class VolcanoStory extends AppCompatActivity {
                 break;
             case 12:
                 i++;
-                mainLayout.setBackgroundResource(R.drawable.vframe14_1);
+                mainLayout.setBackgroundResource(R.drawable.volcano_scene14);
                 break;
             case 13:
                 i++;
-                mainLayout.setBackgroundResource(R.drawable.vframe14_2);
+                mainLayout.setBackgroundResource(R.drawable.volcano_scene15);
                 break;
             case 14:
                 i++;
-                mainLayout.setBackgroundResource(R.drawable.vframe15);
+                mainLayout.setBackgroundResource(R.drawable.volcano_scene16);
                 break;
             case 15:
                 // visible
@@ -295,7 +295,7 @@ public class VolcanoStory extends AppCompatActivity {
                         firstChoice, secondChoice, thirdChoice, platform, volcanoCard1,
                         curtain, welldone, btnProceed, btnOk
                 );
-                mainLayout.setBackgroundResource((R.drawable.vframe6));
+                mainLayout.setBackgroundResource((R.drawable.volcano_scene6));
                 break;
             case 1:
                 // visible
@@ -306,7 +306,7 @@ public class VolcanoStory extends AppCompatActivity {
                         fourthChoice, fifthChoice, sixthChoice, platform, volcanoCard2,
                         curtain, welldone, btnProceed, btnOk
                 );
-                mainLayout.setBackgroundResource((R.drawable.vframe9));
+                mainLayout.setBackgroundResource((R.drawable.volcano_scene9));
                 break;
             case 2:
                 // visible
@@ -317,7 +317,7 @@ public class VolcanoStory extends AppCompatActivity {
                         seventhChoice, eightChoice, ninthChoice, platform, volcanoCard3,
                         curtain, welldone, btnProceed, btnOk
                 );
-                mainLayout.setBackgroundResource((R.drawable.vframe11));
+                mainLayout.setBackgroundResource((R.drawable.volcano_scene11));
                 break;
             case 3:
                 // visible
@@ -328,7 +328,7 @@ public class VolcanoStory extends AppCompatActivity {
                         tenthChoice, eleventhChoice, twelveChoice, platform, volcanoCard4,
                         curtain, welldone, btnProceed, btnOk
                 );
-                mainLayout.setBackgroundResource((R.drawable.vframe13));
+                mainLayout.setBackgroundResource((R.drawable.volcano_scene13));
                 break;
             case 4:
                 // visible

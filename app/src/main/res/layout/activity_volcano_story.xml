@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/vframe1"
+    android:background="@drawable/volcano_scene1"
     tools:context=".VolcanoStory">
 
     <!--first page-->
@@ -82,7 +82,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.45"
-        app:srcCompat="@drawable/fire_prompt1" />
+        app:srcCompat="@drawable/volcano_prompt1" />
 
     <ImageView
         android:id="@+id/first_choice"
@@ -141,7 +141,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/fire_mistake1" />
+        app:srcCompat="@drawable/volcano_mistake1" />
     <!--3rd wrong page-->
     <ImageView
         android:id="@+id/btnOk"
@@ -209,7 +209,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.45"
-        app:srcCompat="@drawable/fire_prompt2" />
+        app:srcCompat="@drawable/volcano_prompt2" />
 
     <ImageView
         android:id="@+id/fourth_choice"
@@ -267,7 +267,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/fire_mistake2" />
+        app:srcCompat="@drawable/volcano_mistake2" />
 
 
     <ImageView
@@ -280,7 +280,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.45"
-        app:srcCompat="@drawable/fire_prompt3" />
+        app:srcCompat="@drawable/volcano_prompt3" />
 
     <ImageView
         android:id="@+id/seventh_choice"
@@ -338,7 +338,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/fire_mistake3" />
+        app:srcCompat="@drawable/volcano_mistake3" />
 
 
     <ImageView
@@ -351,7 +351,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.45"
-        app:srcCompat="@drawable/fire_prompt4" />
+        app:srcCompat="@drawable/volcano_prompt4" />
 
     <ImageView
         android:id="@+id/tenth_choice"
@@ -409,7 +409,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/fire_mistake4" />
+        app:srcCompat="@drawable/volcano_mistake4" />
 
 
     <ImageView
@@ -422,7 +422,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.45"
-        app:srcCompat="@drawable/fire_prompt5" />
+        app:srcCompat="@drawable/volcano_prompt5" />
 
     <ImageView
         android:id="@+id/thirteen_choice"
@@ -465,7 +465,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/fire_mistake5" />
+        app:srcCompat="@drawable/volcano_mistake5" />
 
 
 
