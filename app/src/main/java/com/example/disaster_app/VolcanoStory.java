@@ -2,6 +2,7 @@ package com.example.disaster_app;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -15,6 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class VolcanoStory extends AppCompatActivity {
     private int i = 0, j = 0;
+    private MediaPlayer mediaPlayer;
     private ImageView
             platform,volcanoCard1,secondChoice,firstChoice,thirdChoice,btnPrev,btnNext,btnExit,welldone,btnProceed,curtain,wrongvolcano1,btnOk,
             volcanoCard2,fourthChoice,fifthChoice,sixthChoice,wrongvolcano2,
@@ -28,6 +30,7 @@ public class VolcanoStory extends AppCompatActivity {
 
         setContentView(R.layout.activity_volcano_story);
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        mediaPlayer = MediaPlayer.create(VolcanoStory.this, R.raw.welldone);
 
         mainLayout = findViewById(R.id.main);
         platform = findViewById(R.id.platform);
@@ -78,8 +81,84 @@ public class VolcanoStory extends AppCompatActivity {
     }
 
     public void pageBack(View view) {
-        startActivity(new Intent(VolcanoStory.this, StartPage.class));
+        switch(i) {
+            case 0:
+                startActivity(new Intent(VolcanoStory.this, StartPage.class));
+                break;
+            case 1:
+                i--;
+                mainLayout.setBackgroundResource(R.drawable.volcano_scene1);
+                break;
+            case 2:
+                i--;
+                mainLayout.setBackgroundResource(R.drawable.volcano_scene2);
+                break;
+            case 3:
+                i--;
+                mainLayout.setBackgroundResource(R.drawable.volcano_scene3);
+                break;
+            case 4:
+                i--;
+                mainLayout.setBackgroundResource(R.drawable.volcano_scene4);
+                break;
+            case 5:
+                i--;
+                j--;
+                mainLayout.setBackgroundResource(R.drawable.volcano_scene5);
+                break;
+            case 6:
+                i--;
+                mainLayout.setBackgroundResource(R.drawable.volcano_scene6);
+                break;
+            case 7:
+                i--;
+                mainLayout.setBackgroundResource(R.drawable.volcano_scene7);
+                break;
+            case 8:
+                i--;
+                j--;
+                mainLayout.setBackgroundResource(R.drawable.volcano_scene8);
+                break;
+            case 9:
+                i--;
+                mainLayout.setBackgroundResource(R.drawable.volcano_scene9);
+                break;
+            case 10:
+                i--;
+                j--;
+                mainLayout.setBackgroundResource(R.drawable.volcano_scene10);
+                break;
+            case 11:
+                i--;
+                mainLayout.setBackgroundResource(R.drawable.volcano_scene11);
+                break;
+            case 12:
+                i--;
+                j--;
+                mainLayout.setBackgroundResource(R.drawable.volcano_scene12);
+                break;
+            case 13:
+                i--;
+                mainLayout.setBackgroundResource(R.drawable.volcano_scene13);
+                break;
+            case 14:
+                i--;
+                mainLayout.setBackgroundResource(R.drawable.volcano_scene14);
+                break;
+            case 15:
+                i--;
+                mainLayout.setBackgroundResource(R.drawable.volcano_scene15);
+                break;
+            case 16:
+                i--;
+                j--;
+                mainLayout.setBackgroundResource(R.drawable.volcano_scene16);
+                break;
+            default:
+                break;
+        }
     }
+
 
     public void pageNext(View view) {
         switch(i){
@@ -201,7 +280,7 @@ public class VolcanoStory extends AppCompatActivity {
                 ,secondChoice, thirdChoice,platform,volcanoCard1,
                 wrongvolcano1, btnOk
         );
-
+        mediaPlayer.start();
         mainLayout.setBackgroundResource(R.drawable.bg_plaindarken);
     }
 
@@ -360,7 +439,7 @@ public class VolcanoStory extends AppCompatActivity {
                 ,fifthChoice, sixthChoice,platform,volcanoCard2,
                 wrongvolcano2, btnOk
         );
-
+        mediaPlayer.start();
         mainLayout.setBackgroundResource(R.drawable.bg_plaindarken);
     }
 
@@ -426,7 +505,7 @@ public class VolcanoStory extends AppCompatActivity {
                 ,eightChoice, ninthChoice,platform,volcanoCard3,
                 wrongvolcano3, btnOk
         );
-
+        mediaPlayer.start();
         mainLayout.setBackgroundResource(R.drawable.bg_plaindarken);
     }
 
@@ -440,7 +519,7 @@ public class VolcanoStory extends AppCompatActivity {
                 ,eleventhChoice, twelveChoice,platform,volcanoCard4,
                 wrongvolcano4, btnOk
         );
-
+        mediaPlayer.start();
         mainLayout.setBackgroundResource(R.drawable.bg_plaindarken);
     }
 
@@ -481,7 +560,7 @@ public class VolcanoStory extends AppCompatActivity {
                 platform,volcanoCard5,
                 wrongvolcano5, btnOk
         );
-
+        mediaPlayer.start();
         mainLayout.setBackgroundResource(R.drawable.bg_plaindarken);
     }
 

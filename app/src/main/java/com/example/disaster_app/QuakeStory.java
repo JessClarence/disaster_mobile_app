@@ -2,6 +2,7 @@ package com.example.disaster_app;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -16,14 +17,15 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 public class QuakeStory extends AppCompatActivity {
 
     private ConstraintLayout mainLayout;
+    private MediaPlayer mediaPlayer;
     private int i = 0, j = 0;
     private ImageView
-            platform,floodCard,secondChoice,firstChoice,messQuake1,btnPrev,btnNext,
+            platform,floodCard,secondChoice,firstChoice,thirdALTChoice, messQuake1,btnPrev,btnNext,
             btnExit, curtain, welldone, btnProceed, wrongQuake1, btnOk,
-            thirdChoice, fourthChoice, messQuake2, wrongQuake2,
-            fifthChoice,sixthChoice,messQuake3,wrongQuake3,
-            seventhChoice, eightChoice, messQuake4,wrongQuake4,
-            ninthChoice, tenthChoice, messQuake5, wrongQuake5,
+            thirdChoice, fourthChoice, fifthALTChoice, messQuake2, wrongQuake2,
+            fifthChoice,sixthChoice,seventhALTChoice,messQuake3,wrongQuake3,
+            seventhChoice, eightChoice,ninthALTChoice, messQuake4,wrongQuake4,
+            ninthChoice, tenthChoice,eleventhALTChoice, messQuake5, wrongQuake5,
             eleventhChoice, twelveChoice, messQuake6, wrongQuake6;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,7 @@ public class QuakeStory extends AppCompatActivity {
         setContentView(R.layout.activity_quake_story);
 
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        mediaPlayer = MediaPlayer.create(QuakeStory.this, R.raw.welldone);
 
         mainLayout = findViewById(R.id.main);
         platform = findViewById(R.id.platform);
@@ -66,9 +69,61 @@ public class QuakeStory extends AppCompatActivity {
         twelveChoice = findViewById(R.id.twelve_choice);
         messQuake6 = findViewById(R.id.mess_quake6);
         wrongQuake6 = findViewById(R.id.wrongquake6);
+
+        thirdALTChoice = findViewById(R.id.third_alt_choice);
+        fifthALTChoice = findViewById(R.id.fifth_alt_choice);
+        seventhALTChoice = findViewById(R.id.seventh_alt_choice);
+        ninthALTChoice = findViewById(R.id.ninth_alt_choice);
+        eleventhALTChoice = findViewById(R.id.eleventh_alt_choice);
     }
     public void pageBack(View view) {
-        startActivity(new Intent(QuakeStory.this, StartPage.class));
+
+
+        switch(i) {
+            case 0:
+                startActivity(new Intent(QuakeStory.this, StartPage.class));
+                break;
+            case 1:
+                i--;
+                mainLayout.setBackgroundResource(R.drawable.q16);
+                break;
+            case 2:
+                i--;
+                j--;
+                mainLayout.setBackgroundResource(R.drawable.q17);
+                break;
+            case 3:
+                i--;
+                j--;
+                mainLayout.setBackgroundResource(R.drawable.q18);
+                break;
+            case 4:
+                i--;
+                mainLayout.setBackgroundResource(R.drawable.q19);
+                break;
+            case 5:
+                i--;
+                j--;
+                mainLayout.setBackgroundResource(R.drawable.q20);
+                break;
+            case 6:
+                i--;
+                j--;
+                mainLayout.setBackgroundResource(R.drawable.q21);
+                break;
+            case 7:
+                i--;
+                j--;
+                mainLayout.setBackgroundResource(R.drawable.q22);
+                break;
+            case 8:
+                i--;
+                j--;
+                mainLayout.setBackgroundResource(R.drawable.q23);
+                break;
+            default:
+                break;
+        }
     }
 
 
@@ -97,7 +152,7 @@ public class QuakeStory extends AppCompatActivity {
                 break;
             case 1:
                 // visible
-                setVisibility(firstChoice, secondChoice, messQuake1, platform, floodCard);
+                setVisibility(firstChoice, secondChoice, thirdALTChoice, messQuake1, platform, floodCard);
 
                 // gone
                 setGone(
@@ -109,7 +164,7 @@ public class QuakeStory extends AppCompatActivity {
                 break;
             case 2:
                 // visible
-                setVisibility(thirdChoice, fourthChoice, messQuake2, platform, floodCard);
+                setVisibility(thirdChoice, fourthChoice,fifthALTChoice, messQuake2, platform, floodCard);
 
                 // gone
                 setGone(
@@ -125,7 +180,7 @@ public class QuakeStory extends AppCompatActivity {
                 break;
             case 4:
                 // visible
-                setVisibility(fifthChoice, sixthChoice, messQuake3, platform, floodCard);
+                setVisibility(fifthChoice, sixthChoice,seventhALTChoice, messQuake3, platform, floodCard);
 
                 // gone
                 setGone(
@@ -137,7 +192,7 @@ public class QuakeStory extends AppCompatActivity {
                 break;
             case 5:
                 // visible
-                setVisibility(seventhChoice, eightChoice, messQuake4, platform, floodCard);
+                setVisibility(seventhChoice, eightChoice,ninthALTChoice, messQuake4, platform, floodCard);
 
                 // gone
                 setGone(
@@ -149,7 +204,7 @@ public class QuakeStory extends AppCompatActivity {
                 break;
             case 6:
                 // visible
-                setVisibility(ninthChoice, tenthChoice, messQuake5, platform, floodCard);
+                setVisibility(ninthChoice, tenthChoice,eleventhALTChoice, messQuake5, platform, floodCard);
 
                 // gone
                 setGone(
@@ -185,10 +240,10 @@ public class QuakeStory extends AppCompatActivity {
         // gone
         setGone(
                 btnExit, btnNext, btnPrev, firstChoice
-                ,secondChoice, messQuake1,platform,floodCard,
+                ,secondChoice,thirdALTChoice, messQuake1,platform,floodCard,
                 wrongQuake1, btnOk
         );
-
+        mediaPlayer.start();
         mainLayout.setBackgroundResource(R.drawable.bg_plaindarken);
     }
 
@@ -199,7 +254,7 @@ public class QuakeStory extends AppCompatActivity {
         // gone
         setGone(
                 btnExit, btnNext, btnPrev, firstChoice
-                ,secondChoice, messQuake1,platform,floodCard, welldone, btnProceed
+                ,secondChoice,thirdALTChoice, messQuake1,platform,floodCard, welldone, btnProceed
         );
 
         mainLayout.setBackgroundResource((R.drawable.bg_plaindarken));
@@ -214,7 +269,7 @@ public class QuakeStory extends AppCompatActivity {
 
                 // gone
                 setGone(
-                        firstChoice, secondChoice, messQuake1, platform, floodCard,
+                        firstChoice, secondChoice,thirdALTChoice, messQuake1, platform, floodCard,
                         curtain, welldone, btnProceed, btnOk
                 );
                 mainLayout.setBackgroundResource((R.drawable.q18));
@@ -225,7 +280,7 @@ public class QuakeStory extends AppCompatActivity {
 
                 // gone
                 setGone(
-                        thirdChoice, fourthChoice, messQuake2, platform, floodCard,
+                        thirdChoice, fourthChoice,fifthALTChoice, messQuake2, platform, floodCard,
                         curtain, welldone, btnProceed, btnOk
                 );
                 mainLayout.setBackgroundResource((R.drawable.q19));
@@ -236,7 +291,7 @@ public class QuakeStory extends AppCompatActivity {
 
                 // gone
                 setGone(
-                        fifthChoice, sixthChoice, messQuake3, platform, floodCard,
+                        fifthChoice, sixthChoice,seventhALTChoice, messQuake3, platform, floodCard,
                         curtain, welldone, btnProceed, btnOk
                 );
                 mainLayout.setBackgroundResource((R.drawable.q21));
@@ -247,7 +302,7 @@ public class QuakeStory extends AppCompatActivity {
 
                 // gone
                 setGone(
-                        seventhChoice, eightChoice, messQuake4, platform, floodCard,
+                        seventhChoice, eightChoice,ninthALTChoice, messQuake4, platform, floodCard,
                         curtain, welldone, btnProceed, btnOk
                 );
                 mainLayout.setBackgroundResource((R.drawable.q22));
@@ -258,7 +313,7 @@ public class QuakeStory extends AppCompatActivity {
 
                 // gone
                 setGone(
-                        eightChoice, ninthChoice, messQuake5, platform, floodCard,
+                        eightChoice, ninthChoice,eleventhALTChoice, messQuake5, platform, floodCard,
                         curtain, welldone, btnProceed, btnOk
                 );
                 mainLayout.setBackgroundResource((R.drawable.q22));
@@ -287,7 +342,7 @@ public class QuakeStory extends AppCompatActivity {
         switch(j){
             case 0:
                 // visible
-                setVisibility(firstChoice, secondChoice, messQuake1, platform, floodCard);
+                setVisibility(firstChoice, secondChoice,thirdALTChoice, messQuake1, platform, floodCard);
 
                 // gone
                 setGone(
@@ -296,7 +351,7 @@ public class QuakeStory extends AppCompatActivity {
                 break;
             case 1:
                 // visible
-                setVisibility(thirdChoice, fourthChoice, messQuake2, platform, floodCard);
+                setVisibility(thirdChoice, fourthChoice,fifthALTChoice, messQuake2, platform, floodCard);
 
                 // gone
                 setGone(
@@ -305,7 +360,7 @@ public class QuakeStory extends AppCompatActivity {
                 break;
             case 2:
                 // visible
-                setVisibility(fifthChoice, sixthChoice, messQuake3, platform, floodCard);
+                setVisibility(fifthChoice, sixthChoice,seventhALTChoice, messQuake3, platform, floodCard);
 
                 // gone
                 setGone(
@@ -314,7 +369,7 @@ public class QuakeStory extends AppCompatActivity {
                 break;
             case 3:
                 // visible
-                setVisibility(seventhChoice, eightChoice, messQuake4, platform, floodCard);
+                setVisibility(seventhChoice, eightChoice,ninthALTChoice, messQuake4, platform, floodCard);
 
                 // gone
                 setGone(
@@ -323,7 +378,7 @@ public class QuakeStory extends AppCompatActivity {
                 break;
             case 4:
                 // visible
-                setVisibility(ninthChoice, tenthChoice, messQuake5, platform, floodCard);
+                setVisibility(ninthChoice, tenthChoice,eleventhALTChoice, messQuake5, platform, floodCard);
 
                 // gone
                 setGone(
@@ -351,7 +406,7 @@ public class QuakeStory extends AppCompatActivity {
         // gone
         setGone(
                 btnExit, btnNext, btnPrev, thirdChoice
-                ,fourthChoice, messQuake1,platform,floodCard, welldone, btnProceed, messQuake2
+                ,fourthChoice,fifthALTChoice, messQuake1,platform,floodCard, welldone, btnProceed, messQuake2
         );
 
         mainLayout.setBackgroundResource((R.drawable.bg_plaindarken));
@@ -363,11 +418,11 @@ public class QuakeStory extends AppCompatActivity {
 
         // gone
         setGone(
-                btnExit, btnNext, btnPrev, firstChoice
-                ,secondChoice, messQuake1,platform,floodCard, wrongQuake1, btnOk,
+                btnExit, btnNext, btnPrev, thirdChoice
+                ,fourthChoice,fifthALTChoice, messQuake1,platform,floodCard, wrongQuake1, btnOk,
                 thirdChoice, fourthChoice, messQuake2
         );
-
+        mediaPlayer.start();
         mainLayout.setBackgroundResource(R.drawable.bg_plaindarken);
     }
 
@@ -377,11 +432,11 @@ public class QuakeStory extends AppCompatActivity {
 
         // gone
         setGone(
-                btnExit, btnNext, btnPrev, firstChoice
-                ,secondChoice, messQuake1,platform,floodCard, wrongQuake1, btnOk,
-                fifthChoice, sixthChoice, messQuake3
+                btnExit, btnNext, btnPrev, fifthChoice
+                ,sixthChoice,seventhALTChoice, messQuake3,platform,floodCard, wrongQuake1, btnOk,
+                thirdChoice, fourthChoice, messQuake2
         );
-
+        mediaPlayer.start();
         mainLayout.setBackgroundResource(R.drawable.bg_plaindarken);
     }
 
@@ -391,8 +446,8 @@ public class QuakeStory extends AppCompatActivity {
 
         // gone
         setGone(
-                btnExit, btnNext, btnPrev, thirdChoice
-                ,fourthChoice, messQuake1,platform,floodCard, welldone, btnProceed, messQuake2,
+                btnExit, btnNext, btnPrev, fifthChoice
+                ,sixthChoice,seventhALTChoice, messQuake1,platform,floodCard, welldone, btnProceed, messQuake2,
                 fifthChoice, sixthChoice, messQuake3
         );
 
@@ -405,9 +460,9 @@ public class QuakeStory extends AppCompatActivity {
 
         // gone
         setGone(
-                btnExit, btnNext, btnPrev, thirdChoice
-                ,fourthChoice, messQuake1,platform,floodCard, welldone, btnProceed, messQuake2,
-                seventhChoice, eightChoice, messQuake4
+                btnExit, btnNext, btnPrev, seventhChoice
+                ,eightChoice,ninthALTChoice, messQuake1,platform,floodCard, welldone, btnProceed, messQuake2,
+                messQuake4
         );
 
         mainLayout.setBackgroundResource((R.drawable.bg_plaindarken));
@@ -421,9 +476,9 @@ public class QuakeStory extends AppCompatActivity {
         setGone(
                 btnExit, btnNext, btnPrev, firstChoice
                 ,secondChoice, messQuake1,platform,floodCard, wrongQuake1, btnOk,
-                seventhChoice, eightChoice, messQuake4
+                seventhChoice, eightChoice,ninthALTChoice, messQuake4
         );
-
+        mediaPlayer.start();
         mainLayout.setBackgroundResource(R.drawable.bg_plaindarken);
     }
 
@@ -435,9 +490,9 @@ public class QuakeStory extends AppCompatActivity {
         setGone(
                 btnExit, btnNext, btnPrev, firstChoice
                 ,secondChoice, messQuake1,platform,floodCard, wrongQuake1, btnOk,
-                ninthChoice, tenthChoice, messQuake5
+                ninthChoice, tenthChoice,eleventhALTChoice, messQuake5
         );
-
+        mediaPlayer.start();
         mainLayout.setBackgroundResource(R.drawable.bg_plaindarken);
     }
 
@@ -449,7 +504,7 @@ public class QuakeStory extends AppCompatActivity {
         setGone(
                 btnExit, btnNext, btnPrev, thirdChoice
                 ,fourthChoice, messQuake1,platform,floodCard, welldone, btnProceed, messQuake2,
-                ninthChoice, tenthChoice, messQuake5
+                ninthChoice, tenthChoice,eleventhALTChoice, messQuake5
         );
 
         mainLayout.setBackgroundResource((R.drawable.bg_plaindarken));
@@ -465,7 +520,7 @@ public class QuakeStory extends AppCompatActivity {
                 ,secondChoice, messQuake1,platform,floodCard, wrongQuake1, btnOk,
                 eleventhChoice, twelveChoice, messQuake6
         );
-
+        mediaPlayer.start();
         mainLayout.setBackgroundResource(R.drawable.bg_plaindarken);
     }
 
@@ -478,6 +533,71 @@ public class QuakeStory extends AppCompatActivity {
                 btnExit, btnNext, btnPrev, thirdChoice
                 ,fourthChoice, messQuake1,platform,floodCard, welldone, btnProceed, messQuake2,
                 eleventhChoice, twelveChoice, messQuake6
+        );
+
+        mainLayout.setBackgroundResource((R.drawable.bg_plaindarken));
+    }
+
+    public void pageThirdALTChoice(View view) {
+        // visible
+        setVisibility(wrongQuake1, btnOk);
+
+        // gone
+        setGone(
+                btnExit, btnNext, btnPrev, firstChoice
+                ,secondChoice,thirdALTChoice, messQuake1,platform,floodCard, welldone, btnProceed
+        );
+
+        mainLayout.setBackgroundResource((R.drawable.bg_plaindarken));
+    }
+
+    public void pageFifthALTChoice(View view) {
+        // visible
+        setVisibility(wrongQuake2, btnOk);
+
+        // gone
+        setGone(
+                btnExit, btnNext, btnPrev, thirdChoice, fourthChoice
+                ,fifthALTChoice, messQuake2,platform,floodCard, welldone, btnProceed
+        );
+
+        mainLayout.setBackgroundResource((R.drawable.bg_plaindarken));
+    }
+
+    public void pageSeventhALTChoice(View view) {
+        // visible
+        setVisibility(wrongQuake3, btnOk);
+
+        // gone
+        setGone(
+                btnExit, btnNext, btnPrev, fifthChoice
+                ,sixthChoice,seventhALTChoice, messQuake3,platform,floodCard, welldone, btnProceed
+        );
+
+        mainLayout.setBackgroundResource((R.drawable.bg_plaindarken));
+    }
+
+    public void pageNinthALTChoice(View view) {
+        // visible
+        setVisibility(wrongQuake4, btnOk);
+
+        // gone
+        setGone(
+                btnExit, btnNext, btnPrev, seventhChoice
+                ,eightChoice,ninthALTChoice, messQuake4,platform,floodCard, welldone, btnProceed
+        );
+
+        mainLayout.setBackgroundResource((R.drawable.bg_plaindarken));
+    }
+
+    public void pageEleventhALTChoice(View view) {
+        // visible
+        setVisibility(wrongQuake5, btnOk);
+
+        // gone
+        setGone(
+                btnExit, btnNext, btnPrev, ninthChoice
+                ,tenthChoice,eleventhALTChoice, messQuake5,platform,floodCard, welldone, btnProceed
         );
 
         mainLayout.setBackgroundResource((R.drawable.bg_plaindarken));

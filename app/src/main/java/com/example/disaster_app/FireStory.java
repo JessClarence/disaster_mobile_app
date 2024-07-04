@@ -2,6 +2,7 @@ package com.example.disaster_app;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -16,6 +17,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class FireStory extends AppCompatActivity {
 
     private ConstraintLayout mainLayout;
+    private MediaPlayer mediaPlayer;
     private ImageView
             platform,fireCard1,secondChoice,firstChoice,thirdChoice,btnPrev,btnNext,btnExit,welldone,btnProceed,curtain,wrongfire1,btnOk,
             fireCard2,fourthChoice,fifthChoice,sixthChoice,wrongfire2,
@@ -30,6 +32,8 @@ public class FireStory extends AppCompatActivity {
         setContentView(R.layout.activity_fire_story);
 
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+
+        mediaPlayer = MediaPlayer.create(FireStory.this, R.raw.welldone);
 
         mainLayout = findViewById(R.id.main);
         platform = findViewById(R.id.platform);
@@ -80,7 +84,89 @@ public class FireStory extends AppCompatActivity {
     }
 
     public void pageBack(View view) {
-        startActivity(new Intent(FireStory.this, StartPage.class));
+
+
+        switch(i) {
+            case 0:
+                startActivity(new Intent(FireStory.this, StartPage.class));
+                break;
+            case 1:
+                i--;
+                mainLayout.setBackgroundResource(R.drawable.fire_scene1);
+                break;
+            case 2:
+                i--;
+                mainLayout.setBackgroundResource(R.drawable.fire_scene2);
+                break;
+            case 3:
+                i--;
+                mainLayout.setBackgroundResource(R.drawable.fire_scene3);
+                break;
+            case 4:
+                i--;
+                mainLayout.setBackgroundResource(R.drawable.fire_scene4);
+                break;
+            case 5:
+                i--;
+                j--;
+                mainLayout.setBackgroundResource(R.drawable.fire_scene4_1);
+                break;
+            case 6:
+                i--;
+                mainLayout.setBackgroundResource(R.drawable.fire_scene4_2);
+                break;
+            case 7:
+                i--;
+                j--;
+                mainLayout.setBackgroundResource(R.drawable.fire_scene4_3);
+                break;
+            case 8:
+                i--;
+                mainLayout.setBackgroundResource(R.drawable.fire_scene5);
+                break;
+            case 9:
+                i--;
+                j--;
+                mainLayout.setBackgroundResource(R.drawable.fire_scene6);
+                break;
+            case 10:
+                i--;
+                mainLayout.setBackgroundResource(R.drawable.fire_scene7);
+                break;
+            case 11:
+                i--;
+                mainLayout.setBackgroundResource(R.drawable.fire_scene8);
+                break;
+            case 12:
+                i--;
+                j--;
+                mainLayout.setBackgroundResource(R.drawable.fire_scene9);
+                break;
+            case 13:
+                i--;
+                mainLayout.setBackgroundResource(R.drawable.fire_scene10);
+                break;
+            case 14:
+                i--;
+                mainLayout.setBackgroundResource(R.drawable.fire_scene11);
+                break;
+            case 15:
+                i--;
+                j--;
+                mainLayout.setBackgroundResource(R.drawable.fire_scene12);
+                break;
+            case 16:
+                i--;
+                mainLayout.setBackgroundResource(R.drawable.fire_scene13);
+                break;
+            case 17:
+                i--;
+                j--;
+                mainLayout.setBackgroundResource(R.drawable.fire_scene14);
+                break;
+            default:
+                break;
+        }
     }
 
 
@@ -223,7 +309,7 @@ public class FireStory extends AppCompatActivity {
                 ,secondChoice, thirdChoice,platform,fireCard1,
                 wrongfire1, btnOk
         );
-
+        mediaPlayer.start();
         mainLayout.setBackgroundResource(R.drawable.bg_plaindarken);
     }
 
@@ -303,6 +389,7 @@ public class FireStory extends AppCompatActivity {
                         firstChoice, secondChoice, thirdChoice, platform, fireCard1,
                         curtain, welldone, btnProceed, btnOk
                 );
+
                 mainLayout.setBackgroundResource((R.drawable.fire_scene5));
                 break;
             case 1:
@@ -383,6 +470,7 @@ public class FireStory extends AppCompatActivity {
     }
 
     public void pageSixthChoice(View view) {
+        mediaPlayer.start();
         // visible
         setVisibility(welldone, btnProceed, curtain);
 
@@ -393,7 +481,7 @@ public class FireStory extends AppCompatActivity {
                 platform,fireCard2,
                 wrongfire1, btnOk
         );
-
+        mediaPlayer.start();
         mainLayout.setBackgroundResource(R.drawable.bg_plaindarken);
     }
 
@@ -424,6 +512,7 @@ public class FireStory extends AppCompatActivity {
     }
 
     public void pageNinthChoice(View view) {
+        mediaPlayer.start();
         // visible
         setVisibility(welldone, btnProceed, curtain);
 
@@ -434,11 +523,12 @@ public class FireStory extends AppCompatActivity {
                 platform,fireCard3,
                 wrongfire3, btnOk
         );
-
+        mediaPlayer.start();
         mainLayout.setBackgroundResource(R.drawable.bg_plaindarken);
     }
 
     public void pageTenthChoice(View view) {
+        mediaPlayer.start();
         // visible
         setVisibility(welldone, btnProceed, curtain);
 
@@ -449,7 +539,7 @@ public class FireStory extends AppCompatActivity {
                 platform,fireCard4,
                 wrongfire4, btnOk
         );
-
+        mediaPlayer.start();
         mainLayout.setBackgroundResource(R.drawable.bg_plaindarken);
     }
 
@@ -480,6 +570,7 @@ public class FireStory extends AppCompatActivity {
     }
 
     public void pageThirteenChoice(View view) {
+        mediaPlayer.start();
         // visible
         setVisibility(welldone, btnProceed, curtain);
 
@@ -490,7 +581,7 @@ public class FireStory extends AppCompatActivity {
                 platform,fireCard5,
                 wrongfire5, btnOk
         );
-
+        mediaPlayer.start();
         mainLayout.setBackgroundResource(R.drawable.bg_plaindarken);
     }
 

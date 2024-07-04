@@ -6,55 +6,72 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/dashb"
-    tools:context=".StartPage">
+    tools:context=".StartPage"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
 
-
-    <ImageButton
-        android:id="@+id/btnFire"
-        android:layout_width="187dp"
-        android:layout_height="217dp"
-        android:background="@null"
-        android:onClick="firePage"
-        android:contentDescription="@string/desc_button_fire"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.075"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.644"
-        app:srcCompat="@drawable/button_fire"
-        android:scaleType="fitCenter"/>
-
-    <ImageButton
-        android:id="@+id/btnFlood"
-        android:layout_width="189dp"
-        android:layout_height="215dp"
-        android:background="@null"
-        android:contentDescription="@string/desc_button_flood"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.637"
-        app:srcCompat="@drawable/button_flood"
-        android:onClick="floodPage"
-        android:scaleType="fitCenter"/>
 
     <ImageButton
         android:id="@+id/btnQuake"
-        android:layout_width="190dp"
-        android:layout_height="213dp"
+        android:layout_width="167dp"
+        android:layout_height="183dp"
         android:background="@null"
-        android:onClick="quakePage"
         android:contentDescription="@string/desc_button_quake"
+        android:onClick="quakePage"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.935"
+        app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.631"
-        app:srcCompat="@drawable/button_quake"
-        android:scaleType="fitCenter"/>
+        app:layout_constraintVertical_bias="0.644"
+        app:srcCompat="@drawable/button_quake" />
+
+    <ImageButton
+        android:id="@+id/btnFlood"
+        android:layout_width="167dp"
+        android:layout_height="183dp"
+        android:background="@null"
+        android:contentDescription="@string/desc_button_flood"
+        android:onClick="floodPage"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.654"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.644"
+        app:srcCompat="@drawable/button_flood" />
+
+    <ImageView
+        android:id="@+id/btnVolcano"
+        android:layout_width="167dp"
+        android:layout_height="183dp"
+        android:contentDescription="@string/desc_button_volcano"
+        android:onClick="volcanoPage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.358"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.644"
+        app:srcCompat="@drawable/volcano" />
+
+    <ImageButton
+        android:id="@+id/btnFire"
+        android:layout_width="167dp"
+        android:layout_height="183dp"
+        android:background="@null"
+        android:contentDescription="@string/desc_button_fire"
+        android:onClick="firePage"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.062"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.644"
+        app:srcCompat="@drawable/button_fire" />
 
     <ImageButton
         android:id="@+id/btnMiniGame"
@@ -63,14 +80,14 @@
         android:background="@null"
         android:contentDescription="@string/desc_button_miniGame"
         android:onClick="minigamePage"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.024"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.047"
-        app:srcCompat="@drawable/minigame_icon"
-        android:scaleType="fitCenter"/>
+        app:srcCompat="@drawable/minigame_icon" />
 
     <ImageButton
         android:id="@+id/btnQuiz"
@@ -79,14 +96,14 @@
         android:background="@null"
         android:contentDescription="@string/desc_button_quiz"
         android:onClick="quizPage"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.975"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.047"
-        app:srcCompat="@drawable/button_quiz"
-        android:scaleType="fitCenter"/>
+        app:srcCompat="@drawable/button_quiz" />
 
     <ImageButton
         android:id="@+id/btnBack"
@@ -95,12 +112,13 @@
         android:background="@null"
         android:contentDescription="@string/desc_manual_button_back"
         android:onClick="backPage"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.024"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.984"
-        app:srcCompat="@drawable/button_back"
-        android:scaleType="fitCenter"/>
+        app:srcCompat="@drawable/button_back" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
