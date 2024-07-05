@@ -71,6 +71,7 @@ public class Quiz extends AppCompatActivity {
         btnBack = findViewById(R.id.btnBack);
 
         scoreButton.setVisibility(View.GONE);  // Initially hide the score button
+        btnNext.setEnabled(false); // Initially disable the next button
 
         pageNext(null);
     }
@@ -83,6 +84,7 @@ public class Quiz extends AppCompatActivity {
     }
 
     public void pageNext(View view) {
+        btnNext.setEnabled(false);
         if (i < 10) { // Only display 10 questions
             ConstraintLayout layout = findViewById(R.id.main);
             layout.setBackgroundResource(drawableQuestions[i]);
@@ -121,6 +123,7 @@ public class Quiz extends AppCompatActivity {
         scoreButton.setImageResource(scoreDrawable);
         scoreButton.setVisibility(View.VISIBLE);
 
+        btnNext.setEnabled(true);
         btnNext.setImageResource(R.drawable.backbutton);
         btnNext.setOnClickListener(v -> startActivity(new Intent(Quiz.this, StartPage.class)));
     }
@@ -147,6 +150,7 @@ public class Quiz extends AppCompatActivity {
                     "q" + (currentIndex + 1) + (char)('a' + answerIndex) + "c",
                     "drawable", getPackageName()));
             correctCount++;
+
         } else {
             clickedButton.setImageResource(getResources().getIdentifier(
                     "q" + (currentIndex + 1) + (char)('a' + answerIndex) + "w",
@@ -167,6 +171,7 @@ public class Quiz extends AppCompatActivity {
                         "drawable", getPackageName()));
             }
         }
+        btnNext.setEnabled(true);
     }
 
     public void backButton(View view) {

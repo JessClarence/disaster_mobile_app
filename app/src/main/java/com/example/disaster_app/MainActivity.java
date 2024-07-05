@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void closeApp(View view) {
-        finish();
+        finishAffinity();
     }
 
     public void startPage(View view) {
