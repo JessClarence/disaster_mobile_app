@@ -87,5 +87,20 @@
         app:layout_constraintVertical_bias="0.082"
         app:srcCompat="@drawable/exitbutton" />
 
+    <ImageButton
+        android:id="@+id/scoreButton"
+        android:layout_width="334dp"
+        android:layout_height="78dp"
+        android:background="@null"
+        android:contentDescription="Score"
+        android:onClick="scoreButton"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.274"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.459"
+        app:srcCompat="@drawable/score1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
